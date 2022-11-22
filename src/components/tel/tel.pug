@@ -1,0 +1,9 @@
+mixin tel(params = {})
+  -
+    const {
+      hrefTel= "",
+      numberTel= "",
+    } = params;
+
+  .tel
+    a.tel__link(href= hrefTel)= numberTel

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'),
+      url('./assets/fonts/roboto-regular.woff2') format('woff2'),
+      url('./assets/fonts/roboto-regular.woff') format('woff'),
+      url('./assets/fonts/roboto-regular.ttf') format('truetype'),
+      url('./assets/fonts/roboto-regular.svg') format('svg');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Medium'),
+      url('./assets/fonts/roboto-medium.woff2') format('woff2'),
+      url('./assets/fonts/roboto-medium.woff') format('woff'),
+      url('./assets/fonts/roboto-medium.ttf') format('truetype'),
+      url('./assets/fonts/roboto-medium.svg') format('svg');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Bold'),
+      url('./assets/fonts/roboto-bold.woff2') format('woff2'),
+      url('./assets/fonts/roboto-bold.woff') format('woff'),
+      url('./assets/fonts/roboto-bold.ttf') format('truetype'),
+      url('./assets/fonts/roboto-bold.svg') format('svg');
+}

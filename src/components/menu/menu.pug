@@ -1,0 +1,12 @@
+mixin menu(params = {})
+  -
+    const {
+      menuItems= [],
+    } = params;
+
+  nav.menu
+    ul.menu__list
+      each menuItem in menuItems
+        li.menu__item
+          - const {menuItemLink, menuItemName} = menuItem;
+          a.menu__link(href= menuItemLink)= menuItemName

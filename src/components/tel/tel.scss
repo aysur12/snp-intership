@@ -1,0 +1,8 @@
+.tel {
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    @include font-text-normal;
+  }
+}

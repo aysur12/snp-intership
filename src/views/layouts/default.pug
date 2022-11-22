@@ -1,3 +1,5 @@
+include ../../components/header/header
+
 block variables
 
 doctype html
@@ -9,9 +11,19 @@ html(lang="ru")
     title #{title ? title : 'Заголовок страницы'}
     link(href="./assets/styles/main.css" rel="stylesheet")
   body
+    +header({
+      srcLogoImg: "./assets/images/logo.png",
+      menuItems: [
+        {menuItemLink: "/mock-address/change-me", menuItemName: "Туры"},
+        {menuItemLink: "/mock-address/change-me", menuItemName: "Создать тур"},
+        {menuItemLink: "/mock-address/change-me", menuItemName: "Отзывы"},
+        {menuItemLink: "/mock-address/change-me", menuItemName: "Истории"},
+      ],
+      hrefTel: "tel:+7(999)9999999",
+      numberTel: "+7 999 999 99 99",
+    })
     main
-      include ../../components/header/header
       block content
-      include ../../components/footer/footer
+    include ../../components/footer/footer
     script(src="./assets/js/index.js")
     block scripts
