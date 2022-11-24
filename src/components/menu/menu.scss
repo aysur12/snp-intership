@@ -5,7 +5,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    gap: 3.25em;
+    gap: 3.125em;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -16,10 +16,7 @@
     color: $white;
     text-decoration: none;
     @include font-text-normal;
-
-    &:active {
-      color: $orange200;
-    }
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -39,10 +36,6 @@
       width: 100%;
       transition-duration: 0.3s;
       opacity: 1;
-    }
-
-    &:active::before {
-      background-color: $orange200;
     }
   }
 }

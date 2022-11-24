@@ -1,0 +1,101 @@
+include ../input-group/input-group
+
+mixin tour-form(params= {})
+  -
+    const {
+      touFormTitleText= "",
+      touFormSubtitleText= "",
+      inputNameTitleText= "",
+      inputNameType,
+      inputNameName,
+      inputNamePlaceholder,
+      inputNamePattern,
+      inputNameAutofocus,
+      selectTitleText= "",
+      selectedOptionText= "",
+      valueSelect1= "",
+      valueSelect2= "",
+      inputEmailTitleText= "",
+      inputEmailType,
+      inputEmailName,
+      inputEmailPlaceholder,
+      inputEmailPattern,
+      inputTelTitleText= "",
+      inputTelType,
+      inputTellName,
+      inputTelPlaceholder,
+      inputTelPattern,
+      inputDateFromTitleText= "",
+      inputDateFromType,
+      inputDateFromName,
+      inputDateFromPlaceholder,
+      inputDateToTitleText= "",
+      inputDateToType,
+      inputDateToName,
+      inputDateToPlaceholder,
+      textareaTitleText= "",
+    } = params;
+
+  .tour-form
+    .tour-form__container
+      .tour-form__heading
+        h2.tour-form__title= touFormTitleText
+        p.tour-form__subtitle
+          != touFormSubtitleText
+      form.tour-form__form
+        fieldset.tour-form__fieldset
+          .tour-form__input-field.tour-form__input-field_name
+            h4.tour-form__input-title= inputNameTitleText
+            .tour-form__input-group
+              +input-group({
+                type: inputNameType,
+                name: inputNameName,
+                placeholder: inputNamePlaceholder,
+                pattern: inputNamePattern,
+              })
+          .tour-form__input-field.tour-form__input-field_select
+            h4.tour-form__input-title= selectTitleText
+            select.tour-form__select(name="select-direction")
+              option.tour-form__option(value="" disabled selected)= selectedOptionText
+              option.tour-form__option(value=valueSelect1)= valueSelect1
+              option.tour-form__option(value=valueSelect2)= valueSelect2
+          .tour-form__input-field.tour-form__input-field_email
+            h4.tour-form__input-title= inputEmailTitleText
+            .tour-form__input-group
+              +input-group({
+                type: inputEmailType,
+                name: inputEmailName,
+                placeholder: inputEmailPlaceholder,
+                pattern: inputEmailPattern,
+              })
+          .tour-form__input-field.tour-form__input-field_tel
+            h4.tour-form__input-title= inputTelTitleText
+            .tour-form__input-group
+              +input-group({
+                type: inputTelType,
+                name: inputTellName,
+                placeholder: inputTelPlaceholder,
+                pattern: inputTelPattern,
+              })
+          .tour-form__input-field.tour-form__input-field_date-from
+            h4.tour-form__input-title= inputDateFromTitleText
+            .tour-form__input-group
+              +input-group({
+                type: inputDateFromType,
+                name: inputDateFromName,
+                placeholder: inputDateFromPlaceholder,
+                onfocus: "(this.type='date')",
+              })
+          .tour-form__input-field.tour-form__input-field_date-to
+            h4.tour-form__input-title= inputDateToTitleText
+            .tour-form__input-group
+              +input-group({
+                type: inputDateToType,
+                name: inputDateToName,
+                placeholder: inputDateToPlaceholder,
+                onfocus: "(this.type='date')",
+              })
+          .tour-form__input-field.tour-form__input-field_textarea
+            h4.tour-form__input-title= textareaTitleText
+            textarea.tour-form__textarea(name="comment") 
+        button(type="submit") Отправить

@@ -1,0 +1,32 @@
+mixin input-group(params= {})
+  -
+    const {
+      type= "",
+      name= "",
+      placeholder= "",
+      pattern= "",
+      value= "",
+      required= true,
+      autofocus= false,
+      disabled= false,
+      isMasked= false,
+      onfocus,
+    } = params;
+
+    const maskedInput = masked ? "input-group__input_masked js-input-group__input_masked" : "";
+
+    const inputAttributes = {
+      type,
+      name,
+      placeholder,
+      autofocus,
+      required,
+      disabled,
+      value,
+      pattern,
+      onfocus,
+    }
+
+  .input-group
+    label.input-group__label
+      input.input-group__input&attributes(inputAttributes)

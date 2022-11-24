@@ -1,0 +1,39 @@
+include ../link-more/link-more
+
+mixin tours(params = {})
+  -
+    const {
+      toursTitleText= "",
+      toursLinks= [],
+      tourCards= [],
+      linkMoreHref,
+      linkMoreText
+    } = params;
+
+  .tours
+    .tours__container
+      .tours__heading
+        h2.tours__title= toursTitleText
+        ul.tours__link-list
+          each toursLink in toursLinks
+            li.tours__link-item
+              - const {toursLinkHref, toursLinkName} = toursLink;
+              a.tours__link(href= toursLinkHref)= toursLinkName
+      ul.tours__cards
+        each tourCard in tourCards
+          li.tours__card
+            -
+              const {
+                cardTourImgSrc,
+                cardTourImgAlt,
+                cardTitleText,
+                cardSubtitleText,
+                cardLinkHref} = tourCard;
+            .tours__card-gradient-block
+            img.tours__card-img(src= cardTourImgSrc, alt= cardTourImgAlt)
+            .tours__card-content
+              .tours__card-heading
+                h3.tours__card-title= cardTitleText
+                p.tours__card-subtitle= cardSubtitleText
+              .tours__link-more
+                +link-more({linkMoreHref: cardLinkHref, linkMoreText})

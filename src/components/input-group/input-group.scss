@@ -1,0 +1,27 @@
+.input-group {
+  width: 100%;
+  max-width: 500px;
+
+  &__input {
+    width: 100%;
+    padding: 19px;
+    color: $black;
+    background-color: $beige100;
+    border: 1px solid $beige200;
+    border-radius: 10px;
+    outline: none;
+    @include font-text-normal;
+
+    &::placeholder {
+      color: $gray300;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      border: 1px solid $gray300;
+    }
+  }
+}

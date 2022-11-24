@@ -1,9 +1,13 @@
 mixin promo(params= {})
   -
     const {
-
+      pageTitle= "",
+      promoSubtitleText= "",
+      promoButtonText= "",
     } = params;
 
-  section.promo
+  .promo
     .promo__container
-      
+      h1.promo__title= pageTitle
+      p.promo__subtitle= promoSubtitleText
+      a.promo__button= promoButtonText

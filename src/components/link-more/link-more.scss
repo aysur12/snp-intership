@@ -1,0 +1,30 @@
+.link-more {
+  display: flex;
+  align-items: center;
+  gap: 0.938em;
+  max-width: 199px;
+  padding: 0.438em 1.25em;
+  text-decoration: none;
+  transition-duration: .2s;
+  border-radius: 50px;
+
+  &:hover {
+    background-color: $green400;
+  }
+
+  &:active {
+    background-color: $orange200;
+  }
+
+  &__span {
+    color: $white;
+    @include font-text-big;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 24px;
+    height: 26px;
+    background-image: url(../../assets/images/arrow-bt.svg);
+  }
+}

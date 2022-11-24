@@ -1,0 +1,121 @@
+.tour-form {
+  width: 100%;
+  max-width: 1920px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    max-width: 1212px;
+    margin: 0 auto;
+    padding: 0 1.313em;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__title {
+    margin: 0;
+    color: $black;
+    text-align: center;
+    @include font-h2;
+  }
+
+  &__subtitle {
+    max-width: 418px;
+    margin: 0;
+    color: $gray300;
+    text-align: center;
+    @include font-text-normal;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 1170px;
+    padding: 70px;
+    background-color: $white;
+    border-radius: 50px;
+  }
+
+  &__fieldset {
+    display: grid;
+    grid:
+    'name direction' 1fr
+    'email phone' 1fr
+    'date-from date-to' 1fr
+    'comment comment'
+    / 1fr 1fr;
+    gap: 33px 30px;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+
+    &_name {
+      grid-area: name;
+    }
+
+    &_select {
+      grid-area: direction;
+    }
+
+    &_email {
+      grid-area: email;
+    }
+
+    &_tel {
+      grid-area: phone;
+    }
+
+    &_date-from {
+      grid-area: date-from;
+    }
+
+    &_date-to {
+      grid-area: date-to;
+    }
+
+    &_textarea {
+      grid-area: comment;
+    }
+  }
+
+  &__input-title {
+    margin: 0;
+    color: $black;
+    @include font-text-normal
+  }
+
+  &__input-group {
+    width: 100%;
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 152px;
+    background-color: $beige100;
+    border: 1px solid $beige200;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      border: 1px solid $gray300;
+    }
+  }
+}

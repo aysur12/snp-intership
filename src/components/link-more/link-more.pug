@@ -1,0 +1,10 @@
+mixin link-more(params= {})
+  -
+    const {
+      linkMoreHref= "",
+      linkMoreText= "",
+    } = params;
+
+  a.link-more(href= linkMoreHref)
+    span.link-more__span= linkMoreText
+    span.link-more__icon

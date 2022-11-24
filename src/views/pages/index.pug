@@ -1,7 +1,112 @@
 extends ../layouts/default
+include ../../components/promo/promo
+include ../../components/tours/tours
+include ../../components/tour-form/tour-form
 
 block variables
-  title YourTour
+  - const title= "YourTour";
 
 block content
-  h1 Главная страница 2
+  section.page__promo
+    +promo({
+      pageTitle: "Идеальные путешествия существуют",
+      promoSubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
+      promoButtonText: "Найти тур",
+    })
+  section.page__tours
+    +tours({
+      toursTitleText: "Выбери свой тур",
+      toursLinks: [
+        {toursLinkHref: "/mock-address/change-me", toursLinkName: "Популярные"},
+        {toursLinkHref: "/mock-address/change-me", toursLinkName: "Авторские"},
+        {toursLinkHref: "/mock-address/change-me", toursLinkName: "Походы"},
+        {toursLinkHref: "/mock-address/change-me", toursLinkName: "Сплавы"},
+        {toursLinkHref: "/mock-address/change-me", toursLinkName: "Велопрогулки"},
+      ],
+      tourCards: [
+        {
+          cardTourImgSrc: "./assets/images/card-tour-photo-1.jpg",
+          cardTourImgAlt: "Автомобиль в горах",
+          cardTitleText: "Путешествие в горы",
+          cardSubtitleText: "от 80 000 руб",
+          cardLinkHref: "/mock-address/change-me-card-1",
+        },
+        {
+          cardTourImgSrc: "./assets/images/card-tour-photo-2.jpg",
+          cardTourImgAlt: "Девушка в пустыне",
+          cardTitleText: "Путешествие в горы",
+          cardSubtitleText: "от 80 000 руб",
+          cardLinkHref: "/mock-address/change-me-card-2",
+        },
+        {
+          cardTourImgSrc: "./assets/images/card-tour-photo-3.jpg",
+          cardTourImgAlt: "Утес на берегу моря",
+          cardTitleText: "Путешествие в горы",
+          cardSubtitleText: "от 80 000 руб",
+          cardLinkHref: "/mock-address/change-me-card-3",
+        },
+        {
+          cardTourImgSrc: "./assets/images/card-tour-photo-4.jpg",
+          cardTourImgAlt: "Улица города",
+          cardTitleText: "Путешествие в горы",
+          cardSubtitleText: "от 80 000 руб",
+          cardLinkHref: "/mock-address/change-me-card-4",
+        },
+        {
+          cardTourImgSrc: "./assets/images/card-tour-photo-5.jpg",
+          cardTourImgAlt: "Пляж",
+          cardTitleText: "Путешествие в горы",
+          cardSubtitleText: "от 80 000 руб",
+          cardLinkHref: "/mock-address/change-me-card-5",
+        },
+        {
+          cardTourImgSrc: "./assets/images/card-tour-photo-6.jpg",
+          cardTourImgAlt: "Мужчина на берегу горного озера",
+          cardTitleText: "Путешествие в горы",
+          cardSubtitleText: "от 80 000 руб",
+          cardLinkHref: "/mock-address/change-me-card-6",
+        },
+      ],
+      linkMoreText: "Подробнее",
+    })
+  section.page__tour-form
+    +tour-form({
+      touFormTitleText: "Собери свой тур",
+      touFormSubtitleText: "Идейные соображения высшего порядка,<br> а также рамки и место обучения кадров",
+
+      inputNameTitleText: "Имя",
+      inputNameType: "text",
+      inputNameName: "userName",
+      inputNamePlaceholder: "Введите Ваше имя",
+      inputNamePattern: "^[А-Яа-яЁё\s]+$",
+
+      selectTitleText: "Направление",
+      selectedOptionText: "Куда хотите ехать",
+      valueSelect1: "Текст 1",
+      valueSelect2: "Текст 2",
+
+
+      inputEmailTitleText: "Email",
+      inputEmailType: "Email",
+      inputEmailName: "email",
+      inputEmailPlaceholder: "example@mail.com",
+      inputEmailPattern: "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}",
+
+      inputTelTitleText: "Телефон",
+      inputTelType: "tel",
+      inputTellName: "phone",
+      inputTelPlaceholder: "+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _",
+      inputTelPattern: "\+?[0-9\s\-\(\)]+",
+
+      inputDateFromTitleText: "Дата от",
+      inputDateFromType: "text",
+      inputDateFromName: "date-from",
+      inputDateFromPlaceholder: "ДД.ММ.ГГГГ",
+
+      inputDateToTitleText: "Дата до",
+      inputDateToType: "text",
+      inputDateToName: "date-to",
+      inputDateToPlaceholder: "ДД.ММ.ГГГГ",
+
+      textareaTitleText: "Комментарий",
+    })
