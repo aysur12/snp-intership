@@ -35,6 +35,9 @@
   }
 
   &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
     width: 100%;
     max-width: 1170px;
     padding: 70px;
@@ -101,14 +104,53 @@
     width: 100%;
   }
 
+  &__select-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      right: 20px;
+      width: 26px;
+      height: 26px;
+      margin-top: -2px;
+      background-image: url(../../assets/images/arrow-dropdown.svg);
+      pointer-events: none;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    padding: 19px;
+    color: $black;
+    background-color: $beige100;
+    border: 1px solid $beige200;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    @include font-text-normal;
+
+    &:invalid {
+      color: $gray300;
+    }
+  }
+
+  &__option {
+    color: $black;
+  }
+
   &__textarea {
     width: 100%;
     min-height: 152px;
+    padding: 10px;
     background-color: $beige100;
     border: 1px solid $beige200;
     border-radius: 10px;
     outline: none;
     resize: none;
+    @include font-text-normal;
 
     &:hover {
       cursor: pointer;
@@ -117,5 +159,15 @@
     &:focus {
       border: 1px solid $gray300;
     }
+  }
+
+  &__radio-content {
+    display: flex;
+    gap: 31px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
   }
 }

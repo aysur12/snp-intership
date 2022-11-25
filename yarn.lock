@@ -4466,6 +4466,16 @@
     "has-to-string-tag-x" "^1.2.0"
     "is-object" "^1.0.1"
 
+"jquery.maskedinput@^1.4.1":
+  "integrity" "sha512-d4GmaVsN/2E38G3yAZXvBmAlVWuxhYOng/hfFy3pyr9O1CgzfqRJ3nR+DTuxusLOi5EKoA5Jw6YBHRd+BCQYAg=="
+  "resolved" "https://registry.npmjs.org/jquery.maskedinput/-/jquery.maskedinput-1.4.1.tgz"
+  "version" "1.4.1"
+
+"jquery@^3.6.1":
+  "integrity" "sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.1.tgz"
+  "version" "3.6.1"
+
 "js-stringify@^1.0.2":
   "integrity" "sha1-Fzb939lyTyijaCrcYjCufk6Weds="
   "resolved" "https://registry.npmjs.org/js-stringify/-/js-stringify-1.0.2.tgz"

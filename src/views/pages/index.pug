@@ -2,6 +2,7 @@ extends ../layouts/default
 include ../../components/promo/promo
 include ../../components/tours/tours
 include ../../components/tour-form/tour-form
+include ../../components/reviews/reviews
 
 block variables
   - const title= "YourTour";
@@ -82,8 +83,8 @@ block content
 
       selectTitleText: "Направление",
       selectedOptionText: "Куда хотите ехать",
-      valueSelect1: "Текст 1",
-      valueSelect2: "Текст 2",
+      valueSelect1: "Москва",
+      valueSelect2: "Санкт-Петербург",
 
 
       inputEmailTitleText: "Email",
@@ -109,4 +110,37 @@ block content
       inputDateToPlaceholder: "ДД.ММ.ГГГГ",
 
       textareaTitleText: "Комментарий",
+
+      inputRadioTitleText: "Вам есть 18 лет?",
+      firstInputRadioName: "question",
+      firstInputRadioValue: "Yes",
+      firstInputRadioLabelText: "Да",
+      secondInputRadioName: "question",
+      secondInputRadioValue: "No",
+      secondInputRadioLabelText: "Нет",
+
+      checkboxLabelText: "Нажимая кнопку, я принимаю условия ",
+      checkboxLinkText: "Лицензионного договора",
+      checkboxLinkHref: "/mock-address/change-me-checkbox-link"
+    })
+  section.page__reviews
+    +reviews({
+      reviewsTitleText: "Отзывы наших путешественников",
+      reviewsSubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
+      reviewsItems: [
+        {
+          reviewText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.",
+          reviewUserName: "Мария",
+          reviewTourName: "Вдали от дома",
+          avatarImg: "./assets/images/review-photo-1.jpg",
+          avatarImgAlt: "Аватар Марии",
+        },
+                {
+          reviewText: "Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.",
+          reviewUserName: "Павел",
+          reviewTourName: "Путешествие в горы",
+          avatarImg: "./assets/images/review-photo-2.jpg",
+          avatarImgAlt: "Аватар Павла",
+        }
+      ]
     })

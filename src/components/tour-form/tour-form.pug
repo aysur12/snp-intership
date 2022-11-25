@@ -1,4 +1,7 @@
 include ../input-group/input-group
+include ../radio-group/radio-group
+include ../checkbox/checkbox
+include ../form-button/form-button
 
 mixin tour-form(params= {})
   -
@@ -34,6 +37,16 @@ mixin tour-form(params= {})
       inputDateToName,
       inputDateToPlaceholder,
       textareaTitleText= "",
+      inputRadioTitleText= "",
+      firstInputRadioName,
+      firstInputRadioValue,
+      firstInputRadioLabelText,
+      secondInputRadioName,
+      secondInputRadioValue,
+      secondInputRadioLabelText,
+      checkboxLabelText,
+      checkboxLinkText,
+      checkboxLinkHref
     } = params;
 
   .tour-form
@@ -55,10 +68,11 @@ mixin tour-form(params= {})
               })
           .tour-form__input-field.tour-form__input-field_select
             h4.tour-form__input-title= selectTitleText
-            select.tour-form__select(name="select-direction")
-              option.tour-form__option(value="" disabled selected)= selectedOptionText
-              option.tour-form__option(value=valueSelect1)= valueSelect1
-              option.tour-form__option(value=valueSelect2)= valueSelect2
+            .tour-form__select-wrapper
+              select.tour-form__select(name="select-direction" required)
+                option.tour-form__option(value="" disabled selected hidden)= selectedOptionText
+                option.tour-form__option(value=valueSelect1)= valueSelect1
+                option.tour-form__option(value=valueSelect2)= valueSelect2
           .tour-form__input-field.tour-form__input-field_email
             h4.tour-form__input-title= inputEmailTitleText
             .tour-form__input-group
@@ -76,6 +90,8 @@ mixin tour-form(params= {})
                 name: inputTellName,
                 placeholder: inputTelPlaceholder,
                 pattern: inputTelPattern,
+                isMasked: true,
+                id: "phone1",
               })
           .tour-form__input-field.tour-form__input-field_date-from
             h4.tour-form__input-title= inputDateFromTitleText
@@ -97,5 +113,37 @@ mixin tour-form(params= {})
               })
           .tour-form__input-field.tour-form__input-field_textarea
             h4.tour-form__input-title= textareaTitleText
-            textarea.tour-form__textarea(name="comment") 
-        button(type="submit") Отправить
+            textarea.tour-form__textarea(name="comment")
+        .tour-form__input-field
+          h4.tour-form__input-title= inputRadioTitleText
+          .tour-form__radio-content
+            .tour-form__radio-group
+              +radio-group({
+                inputRadioName: firstInputRadioName,
+                inputRadioValue: firstInputRadioValue,
+                inputRadioLabelText: firstInputRadioLabelText,
+              })
+            .tour-form__radio-group
+              +radio-group({
+                inputRadioName: secondInputRadioName,
+                inputRadioValue: secondInputRadioValue,
+                inputRadioLabelText: secondInputRadioLabelText,
+              })
+        .tour-form__checkbox
+          +checkbox({
+            isChecked: false,
+            checkboxLabelText,
+            checkboxLinkText,
+            checkboxLinkHref,
+          })
+        .tour-form__buttons
+          .tour-form__button
+            +form-button({
+              buttonType: "submit",
+              buttonText: "Найти тур"
+            })
+          .tour-form__button
+            +form-button({
+              buttonText: "Сбросить",
+              forReset: true,
+            })

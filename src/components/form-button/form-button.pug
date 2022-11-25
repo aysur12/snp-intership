@@ -1,0 +1,13 @@
+mixin form-button(params= {})
+  -
+    const {
+      buttonType= "",
+      buttonText= "",
+      forReset= false
+    } = params;
+
+    const resetButton = forReset ? "form-button_reset js-form-button_reset" : "";
+    const resetButtonText = forReset ? "form-button__text_reset js-form-button__text_reset" : "";
+  
+  button.form-button(class=`${resetButton}` type= buttonType)
+    span.form-button__text(class=`${resetButtonText}`)= buttonText

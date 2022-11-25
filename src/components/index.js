@@ -1,2 +1,2 @@
 import './header/header';
-import './footer/footer';
+import './input-group/input-group';

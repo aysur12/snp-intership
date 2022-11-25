@@ -1,0 +1,33 @@
+include ../review/review
+
+mixin reviews(params= {})
+  -
+    const {
+      reviewsTitleText= "",
+      reviewsSubtitleText= "",
+      reviewsItems= [],
+    } = params;
+
+  .reviews
+    .reviews__heading
+      h2.reviews__title= reviewsTitleText
+      p.reviews__subtitle= reviewsSubtitleText
+    ul.reviews__list
+      each reviewsItem in reviewsItems
+        li.reviews__item
+          -
+            const {
+              reviewText,
+              reviewUserName,
+              reviewTourName,
+              avatarImg,
+              avatarImgAlt,
+              } = reviewsItem;
+          +review({
+            reviewText,
+            reviewUserName,
+            reviewTourName,
+            avatarImg,
+            avatarImgAlt,
+          })
+

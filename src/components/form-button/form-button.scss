@@ -1,0 +1,40 @@
+.form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 235px;
+  padding: 15px;
+  background-color: $green400;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $green300;
+  }
+
+  &:active {
+    background-color: $green200;
+  }
+
+  &_reset {
+    background-color: $green100;
+
+    &:hover {
+      background-color: $gray100;
+    }
+
+    &:active {
+      background-color: $gray200;
+    }
+  }
+
+  &__text {
+    color: $white;
+    @include font-text-normal;
+
+    &_reset {
+      color: $green400;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.checkbox {
+  width: 100%;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+  }
+
+  &__input {
+    display: grid;
+    place-content: center;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    color: currentColor;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 0.286em;
+    outline: none;
+    appearance: none;
+
+    &::before {
+      width: 12px;
+      height: 10px;
+      background-image: url(../../assets/images/arrow-checkbox.svg);
+      transform: scale(0);
+      transform-origin: bottom left;
+      transition: 120ms transform ease-in-out;
+      content: '';
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: $gray300;
+    @include font-text-small;
+  }
+
+  &__link {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

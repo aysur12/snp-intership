@@ -45,5 +45,9 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-config-standard-scss": "^3.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "jquery.maskedinput": "^1.4.1"
   }
 }

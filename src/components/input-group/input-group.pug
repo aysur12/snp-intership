@@ -11,9 +11,10 @@ mixin input-group(params= {})
       disabled= false,
       isMasked= false,
       onfocus,
+      id,
     } = params;
 
-    const maskedInput = masked ? "input-group__input_masked js-input-group__input_masked" : "";
+    const maskedInput = isMasked ? "input-group__input_masked js-input-group__input_masked" : "";
 
     const inputAttributes = {
       type,
@@ -25,8 +26,9 @@ mixin input-group(params= {})
       value,
       pattern,
       onfocus,
+      id,
     }
 
   .input-group
     label.input-group__label
-      input.input-group__input&attributes(inputAttributes)
+      input.input-group__input(class=`${maskedInput}`)&attributes(inputAttributes)

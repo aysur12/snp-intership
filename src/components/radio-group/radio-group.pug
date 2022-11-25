@@ -1,0 +1,11 @@
+mixin radio-group(params = {})
+  -
+    const {
+      inputRadioName= "",
+      inputRadioValue= "",
+      inputRadioLabelText= "",
+    } = params;
+
+  label.radio-group
+    input.radio-group__input(type="radio" name= inputRadioName value= inputRadioValue)
+    = inputRadioLabelText
