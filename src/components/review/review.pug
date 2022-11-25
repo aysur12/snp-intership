@@ -4,15 +4,16 @@ mixin review(params = {})
       reviewText= "",
       reviewUserName= "",
       reviewTourName= "",
-      avatarImg= "",
+      avatarImgSrc= "",
       avatarImgAlt= "",
     } = params;
 
   .review
-    p.review__text= reviewText
+    p.review__text
+      != reviewText
     .review__user-block
       .review__user-content
         h3.review__user-name= reviewUserName
         p.review__tour-name Тур: #{reviewTourName}
       .review__avatar
-        img.review__avatar-img(img= avatarImg alt= avatarImgAlt)
+        img.review__avatar-img(src= avatarImgSrc alt= avatarImgAlt)

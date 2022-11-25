@@ -1,0 +1,52 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 570px;
+  min-height: 673px;
+  padding: 40px;
+  background-color: $beige200;
+  border-radius: 50px;
+
+  &__text {
+    margin: 0;
+    color: $black;
+    @include font-text-big;
+  }
+
+  &__user-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__user-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__user-name {
+    margin: 0;
+    color: $black;
+    @include font-h3;
+  }
+
+  &__tour-name {
+    margin: 0;
+    color: $gray300;
+    @include font-text-small;
+  }
+
+  &__avatar {
+    max-width: 75px;
+    max-height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

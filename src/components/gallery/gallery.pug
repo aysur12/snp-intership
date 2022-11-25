@@ -1,0 +1,17 @@
+mixin gallery(params= {})
+  -
+    const {
+      galleryTitleText= "",
+      gallerySubtitleText= "",
+      photoItems= [],
+    } = params;
+
+  .gallery
+    .gallery__heading
+      h2.gallery__title= galleryTitleText
+      p.gallery__subtitle= gallerySubtitleText
+    ul.gallery__photos
+      each photoItem in photoItems
+        li.gallery__photo
+          - const { src , alt } = photoItem
+          img.gallery__img(src= src, alt= alt)

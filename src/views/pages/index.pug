@@ -3,6 +3,8 @@ include ../../components/promo/promo
 include ../../components/tours/tours
 include ../../components/tour-form/tour-form
 include ../../components/reviews/reviews
+include ../../components/gallery/gallery
+
 
 block variables
   - const title= "YourTour";
@@ -132,15 +134,35 @@ block content
           reviewText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.",
           reviewUserName: "Мария",
           reviewTourName: "Вдали от дома",
-          avatarImg: "./assets/images/review-photo-1.jpg",
+          avatarImgSrc: "./assets/images/review-photo-1.jpg",
           avatarImgAlt: "Аватар Марии",
         },
-                {
-          reviewText: "Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.",
+        {
+          reviewText: "Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. <br/> <br/>  Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.",
           reviewUserName: "Павел",
           reviewTourName: "Путешествие в горы",
-          avatarImg: "./assets/images/review-photo-2.jpg",
+          avatarImgSrc: "./assets/images/review-photo-2.jpg",
           avatarImgAlt: "Аватар Павла",
         }
+      ],
+    })
+  section.page__gallery
+    +gallery({
+      galleryTitleText: "Фотографии путешествий",
+      gallerySubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
+      photoItems: [
+        {src: "./assets/images/travel-photo-1.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-2.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-3.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-4.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-5.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-6.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-7.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-8.png", alt: ""},
+        {src: "./assets/images/travel-photo-9.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-10.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-11.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-12.jpg", alt: ""},
+        {src: "./assets/images/travel-photo-13.jpg", alt: ""},
       ]
     })

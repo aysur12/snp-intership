@@ -9,25 +9,26 @@ mixin reviews(params= {})
     } = params;
 
   .reviews
-    .reviews__heading
-      h2.reviews__title= reviewsTitleText
-      p.reviews__subtitle= reviewsSubtitleText
-    ul.reviews__list
-      each reviewsItem in reviewsItems
-        li.reviews__item
-          -
-            const {
+    .reviews__container
+      .reviews__heading
+        h2.reviews__title= reviewsTitleText
+        p.reviews__subtitle= reviewsSubtitleText
+      ul.reviews__list
+        each reviewsItem in reviewsItems
+          li.reviews__item
+            -
+              const {
+                reviewText,
+                reviewUserName,
+                reviewTourName,
+                avatarImgSrc,
+                avatarImgAlt,
+                } = reviewsItem;
+            +review({
               reviewText,
               reviewUserName,
               reviewTourName,
-              avatarImg,
+              avatarImgSrc,
               avatarImgAlt,
-              } = reviewsItem;
-          +review({
-            reviewText,
-            reviewUserName,
-            reviewTourName,
-            avatarImg,
-            avatarImgAlt,
-          })
+            })
 

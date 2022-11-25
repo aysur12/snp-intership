@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
+    gap: 6.25em;
     max-width: 1212px;
     margin: 0 auto;
     padding: 0 1.313em;
@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 1.875em;
   }
 
   &__title {
@@ -37,10 +37,10 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 33px;
+    gap: 2.063em;
     width: 100%;
     max-width: 1170px;
-    padding: 70px;
+    padding: 4.375em;
     background-color: $white;
     border-radius: 50px;
   }
@@ -53,7 +53,7 @@
     'date-from date-to' 1fr
     'comment comment'
     / 1fr 1fr;
-    gap: 33px 30px;
+    gap: 2.063em 1.875em;
     margin: 0;
     padding: 0;
     border: none;
@@ -62,7 +62,7 @@
   &__input-field {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5em;
     width: 100%;
 
     &_name {
@@ -144,7 +144,7 @@
   &__textarea {
     width: 100%;
     min-height: 152px;
-    padding: 10px;
+    padding: 0.5em;
     background-color: $beige100;
     border: 1px solid $beige200;
     border-radius: 10px;
@@ -163,11 +163,11 @@
 
   &__radio-content {
     display: flex;
-    gap: 31px;
+    gap: 1.938em;
   }
 
   &__buttons {
     display: flex;
-    gap: 30px;
+    gap: 1.875em;
   }
 }
