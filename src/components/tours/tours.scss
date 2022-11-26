@@ -42,6 +42,7 @@
     text-decoration: none;
     @include font-text-big;
     cursor: pointer;
+    transition-duration: .2s;
 
     &:active {
       color: $orange200;
@@ -100,6 +101,7 @@
     grid-area: 1/-1;
     position: relative;
     z-index: 1;
+    height: 100%;
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
     transition: all 0.3s ease;
   }

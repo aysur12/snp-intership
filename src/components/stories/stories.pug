@@ -1,0 +1,40 @@
+include ../stories-card/stories-card
+
+mixin stories(params= {})
+  -
+    const {
+      storiesTitleText= "",
+      storiesSubtitleText= "",
+      storiesCards= [],
+      linkMoreText,
+      storiesSocialLinks,
+    } = params;
+
+  .stories
+    .stories__container
+      .stories__heading
+        h2.stories__title= storiesTitleText
+        p.stories__subtitle= storiesSubtitleText
+      ul.stories__cards
+        each storiesCard in storiesCards
+          li.stories__stories-card
+            -
+              const {
+                cardImgSrc,
+                cardTitle,
+                cardText,
+                cardListItems,
+                storiesLinkMoreHref,
+                storiesLinkMoreText,
+                storiesSocialLinkText,
+                storiesSocialLinkHref,
+              } = storiesCard;
+            +stories-card({
+              storiesCardImgSrc: cardImgSrc,
+              storiesCardTitle: cardTitle,
+              storiesCardText: cardText,
+              storiesCardListItems: cardListItems,
+              linkMoreHref: storiesLinkMoreHref,
+              linkMoreText,
+              storiesSocialLinks,
+            })

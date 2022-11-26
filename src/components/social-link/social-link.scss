@@ -1,0 +1,13 @@
+.social-link {
+  display: flex;
+  gap: 0.625em;
+  color: $white;
+  text-decoration: none;
+
+  &_place {
+    &_footer {
+      color: $black;
+    }
+  }
+
+}

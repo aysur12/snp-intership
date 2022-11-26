@@ -39,5 +39,17 @@
     background-color: $white;
     border-radius: 10px;
     @include font-text-small;
+    cursor: pointer;
+    transition-duration: .2s;
+
+    &:hover {
+      color: $white;
+      background-color: $orange200;
+    }
+
+    &:active {
+      color: $black;
+      background-color: $orange100;
+    }
   }
 }

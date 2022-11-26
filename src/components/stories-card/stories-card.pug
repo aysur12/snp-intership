@@ -1,0 +1,38 @@
+include ../link-more/link-more
+include ../social-link/social-link
+
+mixin stories-card(params= {})
+  -
+    const {
+      storiesCardImgSrc= "",
+      storiesCardTitle= "",
+      storiesCardText= "",
+      storiesCardListItems= [],
+      linkMoreHref,
+      linkMoreText,
+      storiesSocialLinks= [],
+    } = params;
+
+  .stories-card
+    .stories-card__gradient-block
+    img.stories-card__img(src=storiesCardImgSrc)
+    .stories-card__content
+      .stories-card__content-block
+        h3.stories-card__title= storiesCardTitle
+        .stories-card__info
+          p.stories-card__text= storiesCardText
+          ul.stories-card__list
+            each storiesCardListItem in storiesCardListItems
+              - const {text} = storiesCardListItem;
+              li.stories-card__list-item= text
+      .stories-card__links
+        .stories-card__link-more
+          +link-more({linkMoreHref, linkMoreText})
+        .stories-card__social-links
+          each storiesSocialLink in storiesSocialLinks
+            - const {text, href } = storiesSocialLink
+            .stories-card__social-link
+              +social-link({
+                socialLinkText: text,
+                socialLinkHref: href,
+              })

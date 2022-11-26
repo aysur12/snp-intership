@@ -1,0 +1,17 @@
+mixin social-link(params= {})
+  -
+    const {
+      socialLinkText= "",
+      socialLinkHref= "",
+      forFooter= false,
+      socialImgSrc= "",
+      socialImgAlt= "",
+    } = params;
+
+    const socialLinkForFooter = forFooter ? "social-link_place_footer" : "";
+
+  a.social-link(class= `${socialLinkForFooter}` href=socialLinkHref)
+    if forFooter
+      .social-link__img-block
+        img.social-link__img(src= socialImgSrc, alt= socialImgAlt)
+    span.social-link__span= socialLinkText

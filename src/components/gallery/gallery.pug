@@ -3,15 +3,28 @@ mixin gallery(params= {})
     const {
       galleryTitleText= "",
       gallerySubtitleText= "",
-      photoItems= [],
+      photoPlaceUpItems= [],
+      photoPlaceMiddleItems= [],
+      photoPlaceDownItems= [],
     } = params;
 
   .gallery
     .gallery__heading
       h2.gallery__title= galleryTitleText
       p.gallery__subtitle= gallerySubtitleText
-    ul.gallery__photos
-      each photoItem in photoItems
-        li.gallery__photo
-          - const { src , alt } = photoItem
-          img.gallery__img(src= src, alt= alt)
+    .gallery__content
+      ul.gallery__photos
+        each photoPlaceUpItem in photoPlaceUpItems
+          li.gallery__photo
+            - const { src , alt } = photoPlaceUpItem
+            img.gallery__img(src= src, alt= alt)
+      ul.gallery__photos
+        each photoPlaceMiddleItem in photoPlaceMiddleItems
+          li.gallery__photo.gallery__photo_place_middle
+            - const { src , alt } = photoPlaceMiddleItem
+            img.gallery__img.gallery__img_place_middle(src= src, alt= alt)
+      ul.gallery__photos
+        each photoPlaceDownItem in photoPlaceDownItems
+          li.gallery__photo
+            - const { src , alt } = photoPlaceDownItem
+            img.gallery__img(src= src, alt= alt)

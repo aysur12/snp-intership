@@ -1,13 +1,16 @@
-.gallery {
+.stories {
   width: 100%;
   max-width: 1920px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6.25em;
-  margin: 0 auto;
-  padding: 0 1.25em;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.25em;
+    max-width: 1212px;
+    margin: 0 auto;
+    padding: 0 1.313em;
+  }
 
   &__heading {
     display: flex;
@@ -31,30 +34,14 @@
     @include font-text-normal;
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.875em;
-  }
-
-  &__photos {
-    display: flex;
-    gap: 1.875em;
-    max-width: 1860px;
+  &__cards {
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
 
-  &__photo {
-    border-radius: 50px;
-    overflow: hidden;
-    height: 300px;
-  }
-
-  &__img {
+  &__stories-card {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 }
