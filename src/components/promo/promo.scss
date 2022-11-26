@@ -4,7 +4,21 @@
   background-image: url(../../assets/images/promo-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 1px;
+  background-position-y: -224px;
+
+  @media screen and (max-width: 1024px) {
+
+    background-position: -111px 0;
+  }
+
+  &__gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0) 39.9%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  }
 
   &__container {
     display: flex;
@@ -31,6 +45,10 @@
     color: $white;
     text-align: center;
     @include font-text-normal;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 442px;
+    }
   }
 
   &__button {
@@ -40,7 +58,7 @@
     border-radius: 10px;
     @include font-text-small;
     cursor: pointer;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
 
     &:hover {
       color: $white;

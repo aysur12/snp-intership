@@ -7,9 +7,9 @@
     flex-direction: column;
     align-items: center;
     gap: 6.25em;
-    max-width: 1212px;
+    max-width: 1276px;
     margin: 0 auto;
-    padding: 0 1.313em;
+    padding: 0 3.313em;
   }
 
   &__heading {
@@ -43,20 +43,28 @@
     padding: 4.375em;
     background-color: $white;
     border-radius: 50px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 3.75em;
+    }
   }
 
   &__fieldset {
     display: grid;
     grid:
-    'name direction' 1fr
-    'email phone' 1fr
-    'date-from date-to' 1fr
-    'comment comment'
-    / 1fr 1fr;
+      'name direction' 1fr
+      'email phone' 1fr
+      'date-from date-to' 1fr
+      'comment comment'
+      / 1fr 1fr;
     gap: 2.063em 1.875em;
     margin: 0;
     padding: 0;
     border: none;
+
+    @media screen and (max-width: 1024px) {
+      gap: 2.063em 1.25em;
+    }
   }
 
   &__input-field {
@@ -97,7 +105,7 @@
   &__input-title {
     margin: 0;
     color: $black;
-    @include font-text-normal
+    @include font-text-normal;
   }
 
   &__input-group {
@@ -108,7 +116,7 @@
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 23px;
       right: 20px;

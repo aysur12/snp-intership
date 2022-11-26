@@ -42,14 +42,14 @@
     text-decoration: none;
     @include font-text-big;
     cursor: pointer;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
 
     &:active {
       color: $orange200;
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 30px;
       left: 0;
@@ -75,12 +75,18 @@
 
   &__cards {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 531px);
+    grid-template-columns: repeat(3, 370px);
     gap: 30px;
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-rows: repeat(3, 531px);
+      grid-template-columns: repeat(2, 450px);
+      gap: 18px;
+    }
   }
 
   &__card {
@@ -102,7 +108,12 @@
     position: relative;
     z-index: 1;
     height: 100%;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.06) 48.44%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
     transition: all 0.3s ease;
   }
 
@@ -122,6 +133,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 3.125em 1.875em 2.688em;
+
+    @media screen and (max-width: 1024px) {
+      max-height: 530px;
+    }
   }
 
   &__card-heading {

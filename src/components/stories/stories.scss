@@ -35,6 +35,9 @@
   }
 
   &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125em;
     width: 100%;
     margin: 0;
     padding: 0;

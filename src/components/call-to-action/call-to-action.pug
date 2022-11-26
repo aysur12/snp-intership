@@ -1,0 +1,20 @@
+mixin call-to-action(params = {})
+  -
+    const {
+      callToActionImgSrc= "",
+      callToActionImgAlt= "",
+      callToActionTitleText= "",
+      callToActionText= "",
+      callToActionLinkHref= "",
+      callToActionLinkText= "",
+    } = params;
+
+  .call-to-action
+    .call-to-action__container
+      .call-to-action__img-block
+        img.call-to-action__img(src= callToActionImgSrc, alt=callToActionImgAlt)
+      .call-to-action__content
+        h3.call-to-action__title= callToActionTitleText
+        p.call-to-action__text= callToActionText
+          span.call-to-action__span
+            a.call-to-action__link(href=callToActionLinkHref)= callToActionLinkText

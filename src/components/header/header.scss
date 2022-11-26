@@ -7,8 +7,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1208px;
+    max-width: 1282px;
     margin: 0 auto;
-    padding: 1.805em 1.25em;
+    padding: 1.805em 3.563em;
+
+    @media screen and (max-width: 1024px) {
+      padding: 1.688em 3.563em 1.805em;
+    }
   }
 }

@@ -5,7 +5,7 @@ include ../../components/tour-form/tour-form
 include ../../components/reviews/reviews
 include ../../components/gallery/gallery
 include ../../components/stories/stories
-
+include ../../components/call-to-action/call-to-action
 
 block variables
   - const title= "YourTour";
@@ -186,12 +186,42 @@ block content
             {text: "красивый город"},
           ],
           storiesLinkMoreHref: "/mock-address/change-me-card-story-1",
+          cardStoriesSocialLinks: [
+            {text: "instagram", href: "/mock-address/change-me-instagram"},
+            {text: "facebook", href: "/mock-address/change-me-facebook"},
+            {text: "YouTube", href: "/mock-address/change-me-YouTube"},
+          ],
+        },
+        {
+          cardImgSrc: "./assets/images/story-photo-2.jpg",
+          cardTitle: "Автостопом в Стамбул",
+          cardText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.",
+          storiesLinkMoreHref: "/mock-address/change-me-card-story-2",
+          cardStoriesSocialLinks: [
+            {text: "instagram", href: "/mock-address/change-me-instagram"},
+            {text: "ВKонтакте", href: "/mock-address/change-me-vk"},
+          ],
+        },
+        {
+          cardImgSrc: "./assets/images/story-photo-3.jpg",
+          cardTitle: "Автостопом в Стамбул",
+          cardText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.",
+          storiesLinkMoreHref: "/mock-address/change-me-card-story-2",
+          cardStoriesSocialLinks: [
+            {text: "instagram", href: "/mock-address/change-me-instagram"},
+            {text: "facebook", href: "/mock-address/change-me-facebook"},
+            {text: "ВKонтакте", href: "/mock-address/change-me-vk"},
+          ],
         },
       ],
       linkMoreText: "Подробнее",
-      storiesSocialLinks: [
-        {text: "instagram", href: "/mock-address/change-me-instagram"},
-        {text: "facebook", href: "/mock-address/change-me-facebook"},
-        {text: "YouTube", href: "/mock-address/change-me-YouTube"},
-      ],
+    })
+  section.page__call-to-action
+    +call-to-action({
+      callToActionImgSrc: "./assets/images/footer-photo.jpg",
+      callToActionImgAlt: "Домик в горах",
+      callToActionTitleText: "Пора в путешествие вместе с нами!",
+      callToActionText: "Напиши на почту и узнай подробности на ",
+      callToActionLinkHref: "/mock-address/change-me-call-to-action",
+      callToActionLinkText: "yourtour@gmail.com",
     })

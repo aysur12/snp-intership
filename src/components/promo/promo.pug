@@ -7,7 +7,8 @@ mixin promo(params= {})
     } = params;
 
   .promo
-    .promo__container
-      h1.promo__title= pageTitle
-      p.promo__subtitle= promoSubtitleText
-      a.promo__button= promoButtonText
+    .promo__gradient
+      .promo__container
+        h1.promo__title= pageTitle
+        p.promo__subtitle= promoSubtitleText
+        a.promo__button= promoButtonText

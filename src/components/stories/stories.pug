@@ -26,9 +26,9 @@ mixin stories(params= {})
                 cardListItems,
                 storiesLinkMoreHref,
                 storiesLinkMoreText,
-                storiesSocialLinkText,
-                storiesSocialLinkHref,
+                cardStoriesSocialLinks,
               } = storiesCard;
+
             +stories-card({
               storiesCardImgSrc: cardImgSrc,
               storiesCardTitle: cardTitle,
@@ -36,5 +36,5 @@ mixin stories(params= {})
               storiesCardListItems: cardListItems,
               linkMoreHref: storiesLinkMoreHref,
               linkMoreText,
-              storiesSocialLinks,
+              storiesSocialLinks: cardStoriesSocialLinks,
             })

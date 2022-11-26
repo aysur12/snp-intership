@@ -1,1 +1,24 @@
+include ../social-link/social-link
+
+mixin footer(params={})
+  -
+    const {
+      footerText= "",
+      footerSocialLinks= [],
+    } = params;
+
+  footer.footer
+    .footer__container
+      p.footer__text= footerText
+      ul.footer__social-links
+        each footerSocialLink in footerSocialLinks
+          - const { text, href, imgSrc, imgAlt } = footerSocialLink
+          li.footer__social-link
+            +social-link({
+              socialLinkText: text,
+              socialLinkHref: href,
+              forFooter: true,
+              socialImgSrc: imgSrc,
+              socialImgAlt: imgAlt,
+            })
 

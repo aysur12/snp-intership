@@ -9,6 +9,10 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @media screen and (max-width: 1024px) {
+      gap: 30px;
+    }
   }
 
   &__link {
@@ -19,7 +23,7 @@
     cursor: pointer;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 30px;
       left: 0;

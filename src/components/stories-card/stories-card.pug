@@ -28,10 +28,10 @@ mixin stories-card(params= {})
       .stories-card__links
         .stories-card__link-more
           +link-more({linkMoreHref, linkMoreText})
-        .stories-card__social-links
+        ul.stories-card__social-links
           each storiesSocialLink in storiesSocialLinks
             - const {text, href } = storiesSocialLink
-            .stories-card__social-link
+            li.stories-card__social-link
               +social-link({
                 socialLinkText: text,
                 socialLinkHref: href,

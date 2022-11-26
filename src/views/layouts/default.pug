@@ -1,4 +1,5 @@
 include ../../components/header/header
+include ../../components/footer/footer
 
 block variables
 
@@ -24,6 +25,29 @@ html(lang="ru")
     })
     main
       block content
-    include ../../components/footer/footer
+    +footer({
+      footerText: "Наши социальные сети",
+      footerSocialLinks: [
+        {
+          text: "instagram",
+          href: "/mock-address/change-me-instagram",
+          imgSrc: "./assets/images/inst.png",
+          imgAlt: "Иконка Instagram",
+        },
+        {
+          text: "facebook",
+          href: "/mock-address/change-me-facebook",
+          imgSrc: "./assets/images/fb.png",
+          imgAlt: "Иконка Facebook",
+        },
+                {
+          text: "vkontakte",
+          href: "/mock-address/change-me-vkontakte",
+          imgSrc: "./assets/images/vk.png",
+          imgAlt: "Иконка Вконтакте",
+        },
+
+      ],
+    })
     script(src="./assets/js/index.js")
     block scripts
