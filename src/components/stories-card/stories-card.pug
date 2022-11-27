@@ -5,6 +5,7 @@ mixin stories-card(params= {})
   -
     const {
       storiesCardImgSrc= "",
+      storiesCardImgAlt= "",
       storiesCardTitle= "",
       storiesCardText= "",
       storiesCardListItems= [],
@@ -15,7 +16,7 @@ mixin stories-card(params= {})
 
   .stories-card
     .stories-card__gradient-block
-    img.stories-card__img(src=storiesCardImgSrc)
+    img.stories-card__img(src=storiesCardImgSrc alt=storiesCardImgAlt)
     .stories-card__content
       .stories-card__content-block
         h3.stories-card__title= storiesCardTitle

@@ -21,11 +21,11 @@
 
   &__gradient {
     background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0) 39.9%
-    ),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        180deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0) 39.9%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   }
 
   &__container {
@@ -42,7 +42,7 @@
       justify-content: center;
       gap: 2.5em;
       min-height: 488px;
-      padding: 8.750em 1.563em 3.25em;
+      padding: 8.75em 1.563em 3.25em;
     }
   }
 

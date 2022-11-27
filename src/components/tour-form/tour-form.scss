@@ -91,14 +91,14 @@
 
     @media screen and (max-width: 767px) {
       grid:
-      'name' 
-      'direction' 
-      'email' 
-      'phone' 
-      'date-from' 
-      'date-to'
-      'comment'
-      / 1fr;
+        'name'
+        'direction'
+        'email'
+        'phone'
+        'date-from'
+        'date-to'
+        'comment'
+        / 1fr;
       gap: 1.875em;
     }
   }

@@ -12,9 +12,13 @@
     cursor: pointer;
   }
 
-  &__img {
+  &__svg {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+  }
+
+  &__svg-path {
+    &_fixed {
+      fill: $black;
+    }
   }
 }

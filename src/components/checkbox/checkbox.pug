@@ -10,6 +10,6 @@ mixin checkbox(params = {})
   .checkbox
     label.checkbox__label
       input.checkbox__input(type= "checkbox" name="checkbox" checked= isChecked)
-      p.checkbox__text= checkboxLabelText
+      span.checkbox__text= checkboxLabelText
         span
           a.checkbox__link(href=checkboxLinkHref)= checkboxLinkText
