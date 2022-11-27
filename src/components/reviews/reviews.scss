@@ -14,6 +14,11 @@
     @media screen and (max-width: 1024px) {
       gap: 6.125em;
     }
+
+    @media screen and (max-width: 767px) {
+      gap: 3.125em;
+      padding: 0 1.313em;
+    }
   }
 
   &__heading {
@@ -21,6 +26,10 @@
     flex-direction: column;
     align-items: center;
     gap: 1.875em;
+
+    @media screen and (max-width: 767px) {
+      gap: 1.25em;
+    }
   }
 
   &__title {
@@ -29,6 +38,10 @@
     color: $black;
     text-align: center;
     @include font-h2;
+
+    @media screen and (max-width: 767px) {
+      @include font-h2-mobile;
+    }
   }
 
   &__subtitle {
@@ -37,6 +50,10 @@
     color: $gray300;
     text-align: center;
     @include font-text-normal;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
   }
 
   &__list {
@@ -48,6 +65,11 @@
 
     @media screen and (max-width: 1024px) {
       gap: 1.125em;
+    }
+
+    @media screen and (max-width: 991px) {
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
 }

@@ -2,6 +2,10 @@
   width: 100%;
   max-width: 500px;
 
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+
   &__input {
     width: 100%;
     padding: 0.95em;
@@ -24,6 +28,11 @@
     &:focus {
       background-color: $beige200;
       border: 1px solid $gray300;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 9px;
+      @include font-text-normal-mobile;
     }
   }
 }

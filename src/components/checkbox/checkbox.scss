@@ -9,6 +9,11 @@
     @media screen and (max-width: 1024px) {
       gap: 0.688em;
     }
+
+    @media screen and (max-width: 767px) {
+      align-items: flex-start;
+      gap: 0.625em;
+    }
   }
 
   &__input {
@@ -24,6 +29,11 @@
     outline: none;
     appearance: none;
 
+    @media screen and (max-width: 767px) {
+      width: 20px;
+      height: 20px;
+    }
+
     &::before {
       width: 12px;
       height: 10px;
@@ -32,6 +42,13 @@
       transform-origin: bottom left;
       transition: 120ms transform ease-in-out;
       content: '';
+
+      @media screen and (max-width: 767px) {
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
 
     &:hover {
@@ -47,6 +64,10 @@
     margin: 0;
     color: $gray300;
     @include font-text-small;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
   }
 
   &__link {

@@ -3,7 +3,11 @@
   max-width: 1920px;
 
   &__promo {
-    margin-bottom: 136px;
+    margin-bottom: 8.5em;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 4.688em;
+    }
   }
 
   &__tours,
@@ -11,10 +15,18 @@
   &__reviews,
   &__gallery,
   &__stories {
-    margin-bottom: 135px;
+    margin-bottom: 8.438em;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 4.688em;
+    }
   }
 
   &__call-to-action {
-    margin-bottom: 130px;
+    margin-bottom: 8.125em;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 4.688em;
+    }
   }
 }

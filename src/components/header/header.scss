@@ -14,5 +14,15 @@
     @media screen and (max-width: 1024px) {
       padding: 1.688em 3.563em 1.805em;
     }
+
+    @media screen and (max-width: 767px) {
+      padding: 2.031em 1.25em;
+    }
+  }
+
+  &__menu {
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
   }
 }

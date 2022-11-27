@@ -10,6 +10,10 @@
     max-width: 1212px;
     margin: 0 auto;
     padding: 0 1.313em;
+
+    @media screen and (max-width: 767px) {
+      gap: 3.125em;
+    }
   }
 
   &__heading {
@@ -19,6 +23,10 @@
     align-items: center;
     gap: 2.188em;
     max-width: 698px;
+
+    @media screen and (max-width: 767px) {
+      gap: 1.875em;
+    }
   }
 
   &__title {
@@ -26,14 +34,24 @@
     color: $black;
     text-align: center;
     @include font-h2;
+
+    @media screen and (max-width: 767px) {
+      @include font-h2-mobile;
+    }
   }
 
   &__link-list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.875em;
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @media screen and (max-width: 767px) {
+      gap: 0.625em;
+    }
   }
 
   &__link {
@@ -43,6 +61,10 @@
     @include font-text-big;
     cursor: pointer;
     transition-duration: 0.2s;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-big-mobile;
+    }
 
     &:active {
       color: $orange200;
@@ -82,9 +104,21 @@
     padding: 0;
     list-style-type: none;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
       grid-template-rows: repeat(3, 531px);
       grid-template-columns: repeat(2, 450px);
+      gap: 18px;
+    }
+
+    @media screen and (max-width: 991px) {
+      grid-template-rows: repeat(6, 318px);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-rows: repeat(6, 318px);
+      grid-template-columns: 318px;
       gap: 18px;
     }
   }
@@ -100,6 +134,10 @@
 
     &:hover .tours__card-gradient-block {
       transform: scale(1.2);
+    }
+
+    @media screen and (max-width: 767px) {
+      border-radius: 20px;
     }
   }
 
@@ -137,6 +175,11 @@
     @media screen and (max-width: 1024px) {
       max-height: 530px;
     }
+
+    @media screen and (max-width: 767px) {
+      max-height: 318px;
+      padding: 1.563em 1.563em 1.125em 0.313em;
+    }
   }
 
   &__card-heading {
@@ -144,17 +187,29 @@
     flex-direction: column;
     gap: 1em;
     padding: 0 1.25em;
+
+    @media screen and (max-width: 767px) {
+      gap: 0.813em;
+    }
   }
 
   &__card-title {
     margin: 0;
     color: $white;
     @include font-h3;
+
+    @media screen and (max-width: 767px) {
+      @include font-h3-mobile;
+    }
   }
 
   &__card-subtitle {
     margin: 0;
     color: $white;
     @include font-text-small;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-small-mobile;
+    }
   }
 }

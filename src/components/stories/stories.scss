@@ -7,9 +7,14 @@
     flex-direction: column;
     align-items: center;
     gap: 6.25em;
-    max-width: 1212px;
+    max-width: 1276px;
     margin: 0 auto;
-    padding: 0 1.313em;
+    padding: 0 3.313em;
+
+    @media screen and (max-width: 767px) {
+      gap: 3.125em;
+      padding: 0 1.313em;
+    }
   }
 
   &__heading {
@@ -17,6 +22,10 @@
     flex-direction: column;
     align-items: center;
     gap: 1.875em;
+
+    @media screen and (max-width: 767px) {
+      gap: 1.25em;
+    }
   }
 
   &__title {
@@ -24,6 +33,10 @@
     color: $black;
     text-align: center;
     @include font-h2;
+
+    @media screen and (max-width: 767px) {
+      @include font-h2-mobile;
+    }
   }
 
   &__subtitle {
@@ -32,6 +45,10 @@
     color: $gray300;
     text-align: center;
     @include font-text-normal;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
   }
 
   &__cards {
@@ -42,6 +59,10 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @media screen and (max-width: 767px) {
+      gap: 1.25em;
+    }
   }
 
   &__stories-card {

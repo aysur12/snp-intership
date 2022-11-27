@@ -6,25 +6,35 @@ mixin gallery(params= {})
       photoPlaceUpItems= [],
       photoPlaceMiddleItems= [],
       photoPlaceDownItems= [],
+      forSmallDesktop= false,
+      forMobile= false,
     } = params;
 
-  .gallery
+    const gallerySmallDesktop = forSmallDesktop ? "gallery_for_small-desktop" : "";
+    const galleryMobile = forMobile ? "gallery_for_mobile" : "";
+    const contentMobile = forMobile ? "gallery__content_for_mobile" : "";
+    const photosSmallDesktop = forSmallDesktop ? "gallery__photos_for_small-desktop" : "";
+    const photosMobile = forMobile ? "gallery__photos_for_mobile" : "";
+    const photoSmallDesktop = forSmallDesktop ? "gallery__photo_for_small-desktop" : "";
+    const photoMobile = forMobile ? "gallery__photo_for_mobile" : "";
+
+  .gallery(class= `${gallerySmallDesktop} ${galleryMobile}`)
     .gallery__heading
       h2.gallery__title= galleryTitleText
       p.gallery__subtitle= gallerySubtitleText
-    .gallery__content
-      ul.gallery__photos
+    .gallery__content(class= `${contentMobile}`)
+      ul.gallery__photos(class=`${photosSmallDesktop} ${photosMobile}`)
         each photoPlaceUpItem in photoPlaceUpItems
-          li.gallery__photo
+          li.gallery__photo(class= `${photoSmallDesktop} ${photoMobile}`)
             - const { src , alt } = photoPlaceUpItem
             img.gallery__img(src= src, alt= alt)
-      ul.gallery__photos
+      ul.gallery__photos(class=`${photosSmallDesktop}`)
         each photoPlaceMiddleItem in photoPlaceMiddleItems
           li.gallery__photo.gallery__photo_place_middle
             - const { src , alt } = photoPlaceMiddleItem
             img.gallery__img.gallery__img_place_middle(src= src, alt= alt)
-      ul.gallery__photos
+      ul.gallery__photos(class=`${photosSmallDesktop}`)
         each photoPlaceDownItem in photoPlaceDownItems
-          li.gallery__photo
+          li.gallery__photo(class= `${photoSmallDesktop} ${photoMobile}`)
             - const { src , alt } = photoPlaceDownItem
             img.gallery__img(src= src, alt= alt)

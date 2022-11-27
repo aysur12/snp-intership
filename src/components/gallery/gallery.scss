@@ -8,11 +8,43 @@
   margin: 0 auto;
   padding: 0 1.25em;
 
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
+  &_for {
+    &_small-desktop {
+      display: none;
+
+      @media screen and (max-width: 1024px) {
+        display: flex;
+        gap: 6.375em;
+      }
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      display: flex;
+      gap: 3.125em;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
   &__heading {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.875em;
+
+    @media screen and (max-width: 767px) {
+      gap: 1.25em;
+    }
   }
 
   &__title {
@@ -20,6 +52,10 @@
     color: $black;
     text-align: center;
     @include font-h2;
+
+    @media screen and (max-width: 767px) {
+      @include font-h2-mobile;
+    }
   }
 
   &__subtitle {
@@ -28,12 +64,22 @@
     color: $gray300;
     text-align: center;
     @include font-text-normal;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: 1.875em;
+
+    &_for {
+      &_mobile {
+        gap: 1.125em;
+      }
+    }
   }
 
   &__photos {
@@ -43,12 +89,44 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @media screen and (max-width: 767px) {
+      gap: 0.625em;
+    }
+
+    &_for {
+      &_small-desktop {
+        gap: 1.250em;
+      }
+
+      &_mobile {
+        gap: 1.125em;
+      }
+    }
   }
 
   &__photo {
+    flex-basis: 25%;
+    height: 300px;
     border-radius: 50px;
     overflow: hidden;
-    height: 300px;
+
+    @media screen and (max-width: 767px) {
+      flex-basis: 33.33%;
+      height: 110px;
+      border-radius: 20px;
+    }
+
+    &_for {
+      &_small-desktop {
+        flex-basis: 33.33%;
+      }
+
+      &_mobile {
+        flex-basis: 50%;
+        height: 110px;
+      }
+    }
   }
 
   &__img {

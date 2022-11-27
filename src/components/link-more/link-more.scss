@@ -16,9 +16,17 @@
     background-color: $orange200;
   }
 
+  @media screen and (max-width: 767px) {
+    max-width: 162px;
+  }
+
   &__span {
     color: $white;
     @include font-text-big;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-big-mobile;
+    }
   }
 
   &__icon {

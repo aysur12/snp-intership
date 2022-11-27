@@ -3,5 +3,9 @@
     color: $white;
     text-decoration: none;
     @include font-text-normal;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
   }
 }

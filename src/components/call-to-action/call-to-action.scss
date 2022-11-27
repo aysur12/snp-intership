@@ -4,16 +4,29 @@
 
   &__container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 1.875em;
-    max-width: 771px;
+    max-width: 840px;
     margin: 0 auto;
+    padding: 0 2.156em;
+
+    @media screen and (max-width: 767px) {
+      gap: 1.75em;
+    }
   }
 
   &__img-block {
     flex-basis: 370px;
     border-radius: 50px;
     overflow: hidden;
+
+    @media screen and (max-width: 767px) {
+      height: 133px;
+      flex-basis: 130px;
+      border-radius: 20px;
+    }
   }
 
   &__img {
@@ -33,12 +46,28 @@
     margin: 0;
     color: $black;
     @include font-h3;
+
+    @media screen and (max-width: 840px) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 767px) {
+      @include font-h3-mobile;
+    }
   }
 
   &__text {
     margin: 0;
     color: $gray300;
     @include font-text-normal;
+
+    @media screen and (max-width: 840px) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
   }
 
   &__link {

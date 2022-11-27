@@ -10,6 +10,11 @@
     max-width: 1276px;
     margin: 0 auto;
     padding: 0 3.313em;
+
+    @media screen and (max-width: 767px) {
+      gap: 2.5em;
+      padding: 0 1.313em;
+    }
   }
 
   &__heading {
@@ -17,6 +22,10 @@
     flex-direction: column;
     align-items: center;
     gap: 1.875em;
+
+    @media screen and (max-width: 767px) {
+      gap: 1.25em;
+    }
   }
 
   &__title {
@@ -24,6 +33,10 @@
     color: $black;
     text-align: center;
     @include font-h2;
+
+    @media screen and (max-width: 767px) {
+      @include font-h2-mobile;
+    }
   }
 
   &__subtitle {
@@ -32,6 +45,10 @@
     color: $gray300;
     text-align: center;
     @include font-text-normal;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
   }
 
   &__form {
@@ -46,6 +63,12 @@
 
     @media screen and (max-width: 1024px) {
       padding: 3.75em;
+    }
+
+    @media screen and (max-width: 767px) {
+      gap: 1.875em;
+      border-radius: 30px;
+      padding: 1.25em 1.25em 2.5em;
     }
   }
 
@@ -64,6 +87,19 @@
 
     @media screen and (max-width: 1024px) {
       gap: 2.063em 1.25em;
+    }
+
+    @media screen and (max-width: 767px) {
+      grid:
+      'name' 
+      'direction' 
+      'email' 
+      'phone' 
+      'date-from' 
+      'date-to'
+      'comment'
+      / 1fr;
+      gap: 1.875em;
     }
   }
 
@@ -106,6 +142,10 @@
     margin: 0;
     color: $black;
     @include font-text-normal;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
   }
 
   &__input-group {
@@ -114,6 +154,11 @@
 
   &__select-wrapper {
     position: relative;
+    max-width: 500px;
+
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+    }
 
     &::after {
       content: '';
@@ -125,6 +170,11 @@
       margin-top: -2px;
       background-image: url(../../assets/images/arrow-dropdown.svg);
       pointer-events: none;
+
+      @media screen and (max-width: 767px) {
+        top: 12px;
+        right: 10px;
+      }
     }
   }
 
@@ -152,6 +202,11 @@
     &:invalid {
       color: $gray300;
     }
+
+    @media screen and (max-width: 767px) {
+      padding: 10px;
+      @include font-text-normal-mobile;
+    }
   }
 
   &__option {
@@ -178,6 +233,11 @@
       background-color: $beige200;
       border: 1px solid $gray300;
     }
+
+    @media screen and (max-width: 767px) {
+      max-width: 500px;
+      min-height: 132px;
+    }
   }
 
   &__radio-content {
@@ -187,6 +247,11 @@
 
   &__buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.875em;
+
+    @media screen and (max-width: 767px) {
+      gap: 0.625em;
+    }
   }
 }

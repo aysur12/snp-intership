@@ -10,6 +10,11 @@
   cursor: pointer;
   transition-duration: 0.2s;
 
+  @media screen and (max-width: 767px) {
+    width: 134px;
+    padding: 12px;
+  }
+
   &:hover {
     background-color: $green300;
   }
@@ -36,6 +41,10 @@
 
     &_reset {
       color: $green400;
+    }
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
     }
   }
 }

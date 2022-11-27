@@ -6,9 +6,17 @@
   background-size: cover;
   background-position-y: -224px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1600px) {
+    background-position: center;
+  }
 
+  @media screen and (max-width: 1024px) {
     background-position: -111px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    background-position: center 0;
+    background-size: 204%;
   }
 
   &__gradient {
@@ -29,6 +37,13 @@
     margin: 0 auto;
     padding: 12.938em 3.438em 7.438em;
     min-height: 831px;
+
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+      gap: 2.5em;
+      min-height: 488px;
+      padding: 8.750em 1.563em 3.25em;
+    }
   }
 
   &__title {
@@ -37,6 +52,10 @@
     color: $white;
     text-align: center;
     @include font-h1;
+
+    @media screen and (max-width: 767px) {
+      @include font-h1-mobile;
+    }
   }
 
   &__subtitle {
@@ -48,6 +67,10 @@
 
     @media screen and (max-width: 1024px) {
       max-width: 442px;
+    }
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
     }
   }
 
@@ -68,6 +91,10 @@
     &:active {
       color: $black;
       background-color: $orange100;
+    }
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
     }
   }
 }
