@@ -44,7 +44,3 @@ gulp build
 ```
 gulp start
 ```
-##### Публикация на GitHub Pages
-```
-gulp deploy
-```
