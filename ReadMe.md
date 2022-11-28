@@ -7,7 +7,7 @@ Cсылка на проект: https://aysur12.github.io/snp-intership/
 
 [Исходные макеты с сайта Figma](https://www.figma.com/file/uKDKIf28damyLHA5RJIGeH/SNP:-FE-internship)
 ___
-В работе использовались: 
+В работе использовались:
   + компонентная архитектура;
   + методология [БЭМ](https://ru.bem.info/methodology/quick-start/);
 
@@ -19,9 +19,6 @@ ___
 - Остальной стек:
   + [JQuery](https://github.com/jquery/jquery) (3.6.0)
   + [jquery.maskedinput](https://github.com/digitalBush/jquery.maskedinput) (1.4.1)
-
-___
-Для чистоты кода использовался [ESlint](https://eslint.org/)(7.32.0) и стайлгайд от [AirBnB](https://github.com/leonidlebedev/javascript-airbnb)
 ___
 
 Для соответствия макетов сайта и дизайна использовалось расширение [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru)
