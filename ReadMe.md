@@ -19,6 +19,7 @@ ___
 - Остальной стек:
   + [JQuery](https://github.com/jquery/jquery) (3.6.0)
   + [jquery.maskedinput](https://github.com/digitalBush/jquery.maskedinput) (1.4.1)
+
 ___
 
 Для соответствия макетов сайта и дизайна использовалось расширение [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru)
