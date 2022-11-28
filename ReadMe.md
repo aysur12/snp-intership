@@ -21,8 +21,6 @@ ___
   + [jquery.maskedinput](https://github.com/digitalBush/jquery.maskedinput) (1.4.1)
 
 ___
-Для чистоты кода использовался [ESlint](https://eslint.org/)(7.32.0) и стайлгайд от [AirBnB](https://github.com/leonidlebedev/javascript-airbnb)
-___
 
 Для соответствия макетов сайта и дизайна использовалось расширение [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru)
 ___
