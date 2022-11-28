@@ -1,11 +1,4 @@
 const { parallel, series } = require('gulp');
-const gulp = require('gulp');
-const deploy = require('gulp-gh-pages');
-
-gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
-});
 
 const { views, clean, server, styles, images, fonts, scripts, svgSprite } = require('./gulp/tasks');
 
