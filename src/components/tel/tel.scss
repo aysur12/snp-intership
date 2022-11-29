@@ -1,4 +1,14 @@
 .tel {
+  &:hover {
+    border-bottom: 1px solid $white;
+  }
+
+  &_fixed {
+    &:hover {
+      border-color: $black;
+    }
+  }
+
   &__link {
     color: $white;
     text-decoration: none;

@@ -17,8 +17,10 @@ mixin tours(params = {})
         ul.tours__link-list
           each toursLink in toursLinks
             li.tours__link-item
-              - const {toursLinkHref, toursLinkName} = toursLink;
-              a.tours__link(href= toursLinkHref)= toursLinkName
+              -
+                const {toursLinkHref, toursLinkName, isActive= false} = toursLink;
+                const activeLinkItem = isActive ? "tours__link_active" : "";
+              a.tours__link(class=`${activeLinkItem}` href= toursLinkHref)= toursLinkName
       ul.tours__cards
         each tourCard in tourCards
           li.tours__card

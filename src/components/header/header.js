@@ -2,6 +2,7 @@ window.onscroll = () => {
   const header = document.querySelector('.header');
   const menuItems = document.querySelectorAll('.menu__item');
   const menuLinks = document.querySelectorAll('.menu__link');
+  const telBlock = document.querySelector('.tel');
   const telLink = document.querySelector('.tel__link');
   const logoSvgPaths = document.querySelectorAll('.logo__svg-path');
   const scrollYCount = window.scrollY;
@@ -14,6 +15,7 @@ window.onscroll = () => {
     menuLinks.forEach((menuLink) => {
       menuLink.classList.add('menu__link_fixed');
     });
+    telBlock.classList.add('tel_fixed');
     telLink.classList.add('tel__link_fixed');
     logoSvgPaths.forEach((logoSvgPath) => {
       logoSvgPath.classList.add('logo__svg-path_fixed');
@@ -26,6 +28,7 @@ window.onscroll = () => {
     menuLinks.forEach((menuLink) => {
       menuLink.classList.remove('menu__link_fixed');
     });
+    telBlock.classList.remove('tel_fixed');
     telLink.classList.remove('tel__link_fixed');
     logoSvgPaths.forEach((logoSvgPath) => {
       logoSvgPath.classList.remove('logo__svg-path_fixed');

@@ -9,9 +9,10 @@ mixin social-link(params= {})
     } = params;
 
     const socialLinkForFooter = forFooter ? "social-link_place_footer" : "";
+    const socialLinkTextForFooter = forFooter ? "social-link__text_place_footer" : "";
 
   a.social-link(class= `${socialLinkForFooter}` href=socialLinkHref)
     if forFooter
       .social-link__img-block
         img.social-link__img(src= socialImgSrc, alt= socialImgAlt)
-    span.social-link__span= socialLinkText
+    .social-link__text(class=`${socialLinkTextForFooter}`)= socialLinkText

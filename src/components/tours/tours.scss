@@ -65,14 +65,10 @@
       @include font-text-big-mobile;
     }
 
-    &:active {
-      color: $orange200;
-    }
-
     &::before {
       content: '';
       position: absolute;
-      top: 30px;
+      top: 33px;
       left: 0;
       right: 0;
       width: 30%;
@@ -81,6 +77,10 @@
       background-color: $black;
       transition-duration: 0.3s;
       opacity: 0;
+
+      @media screen and (max-width: 767px) {
+        top: 20px;
+      }
     }
 
     &:hover::before {
@@ -89,8 +89,26 @@
       opacity: 1;
     }
 
-    &:active::before {
-      background-color: $orange200;
+    &_active {
+      color: $orange200;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 33px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        margin: 0 auto;
+        background-color: $orange200;
+        transition-duration: 0.3s;
+        opacity: 1;
+
+        @media screen and (max-width: 767px) {
+          top: 20px;
+        }
+      }
     }
   }
 
@@ -110,12 +128,12 @@
     }
 
     @media screen and (max-width: 991px) {
-      grid-template-rows: repeat(6, 318px);
+      grid-template-rows: repeat(3, 318px);
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 425px) {
       grid-template-rows: repeat(6, 318px);
       grid-template-columns: 318px;
       gap: 18px;
@@ -133,6 +151,11 @@
 
     &:hover .tours__card-gradient-block {
       transform: scale(1.2);
+    }
+
+    &:hover .tours__link-more {
+      background-color: $green400;
+      border-radius: 50px;
     }
 
     @media screen and (max-width: 767px) {
@@ -209,6 +232,14 @@
 
     @media screen and (max-width: 767px) {
       @include font-text-small-mobile;
+    }
+  }
+
+  &__link-more {
+    max-width: 199px;
+
+    @media screen and (max-width: 767px) {
+      max-width: 162px;
     }
   }
 }
