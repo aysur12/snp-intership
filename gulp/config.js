@@ -33,14 +33,14 @@ const paths = {
     watch: './src/assets/images/**/*.{jpg,jpeg,png,gif,svg}'
   },
   fonts: {
-    src: './src/assets/fonts/**/*.{ttf,woff,woff2}',
+    src: './src/assets/fonts/**/*.{ttf,woff,woff2,svg}',
     dist: './dist/assets/fonts/',
-    watch: './src/assets/fonts/**/*.{ttf,woff,woff2}'
+    watch: './src/assets/fonts/**/*.{ttf,woff,woff2,svg}'
   },
   favicons: {
-    src: './src/assets/favicons/**/*.{png,svg, ico, webmanifest}',
+    src: './src/assets/favicons/**/*',
     dist: './dist/assets/favicons/',
-    watch: './src/assets/favicons/**/*.{png,svg, ico, webmanifest}'
+    watch: './src/assets/favicons/**/*'
   },
   sprites: {
     src: './src/sprite/*.svg',
