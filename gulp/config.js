@@ -37,6 +37,11 @@ const paths = {
     dist: './dist/assets/fonts/',
     watch: './src/assets/fonts/**/*.{ttf,woff,woff2}'
   },
+  favicons: {
+    src: './src/assets/favicons/**/*.{png,svg, ico, webmanifest}',
+    dist: './dist/assets/favicons/',
+    watch: './src/assets/favicons/**/*.{png,svg, ico, webmanifest}'
+  },
   sprites: {
     src: './src/sprite/*.svg',
     dist: './dist/assets/images/',
