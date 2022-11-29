@@ -22,6 +22,11 @@
     transform: scale(1.2);
   }
 
+  &:hover .stories-card__link-more {
+    background-color: $green400;
+    border-radius: 50px;
+  }
+
   &__gradient-block {
     grid-area: 1/-1;
     position: relative;
@@ -120,6 +125,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__link-more {
+    max-width: 199px;
+
+    @media screen and (max-width: 767px) {
+      max-width: 162px;
+    }
   }
 
   &__social-links {
