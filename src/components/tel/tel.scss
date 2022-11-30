@@ -1,4 +1,10 @@
 .tel {
+  max-height: 28px;
+
+  @media screen and (max-width: 767px) {
+    max-height: 23px;
+  }
+
   &:hover {
     border-bottom: 1px solid $white;
   }
