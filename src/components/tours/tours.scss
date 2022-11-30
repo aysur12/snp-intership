@@ -183,6 +183,14 @@
     height: 100%;
     object-fit: cover;
     transition: all 0.3s ease;
+
+    @media screen and (max-width: 1024px) {
+      max-height: 530px;
+    }
+
+    @media screen and (max-width: 991px) {
+      max-height: 318px;
+    }
   }
 
   &__card-content {
@@ -198,7 +206,7 @@
       max-height: 530px;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 991px) {
       max-height: 318px;
       padding: 1.563em 1.563em 1.125em 0.313em;
     }
