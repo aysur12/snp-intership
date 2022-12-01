@@ -1,6 +1,6 @@
 import jQuery from 'jquery';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 
-jQuery(function($){
-  $("#phone1").mask("+7 (999) 999-99-99");
+jQuery(($) => {
+  $('#phone1').mask('+7 (999) 999-99-99');
 });
