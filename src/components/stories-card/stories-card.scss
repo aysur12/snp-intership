@@ -153,14 +153,4 @@
       display: none;
     }
   }
-
-  &__social-link {
-    &:hover {
-      border-bottom: 1px solid $white;
-    }
-
-    &:active {
-      border-color: $orange200;
-    }
-  }
 }

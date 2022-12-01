@@ -44,24 +44,28 @@
     color: $white;
     @include font-text-normal;
 
+    &:hover {
+      border-bottom: 1px solid $white;
+    }
+
     &_place {
       &_footer {
         color: $black;
 
         @media screen and (max-width: 767px) {
-          max-height: 23px;
+          max-height: 28px;
           @include font-text-normal-mobile;
         }
 
         &:hover {
-          border-bottom: 1px solid $black;
-        }
-
-        &:active {
-          color: $orange200;
-          border-color: $orange200;
+          border-color: $black;
         }
       }
+    }
+
+    &:active {
+      color: $orange200;
+      border-color: $orange200;
     }
   }
 }
