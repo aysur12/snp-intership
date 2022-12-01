@@ -33,6 +33,7 @@
     color: $white;
     text-decoration: none;
     @include font-text-normal;
+
     cursor: pointer;
 
     &_fixed {

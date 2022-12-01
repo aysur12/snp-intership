@@ -3,6 +3,7 @@
   gap: 0.55em;
   color: $black;
   @include font-text-normal;
+
   cursor: pointer;
 
   @media screen and (max-width: 767px) {

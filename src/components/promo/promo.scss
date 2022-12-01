@@ -1,6 +1,6 @@
 .promo {
   width: 100%;
-  background-image: url(../../assets/images/promo-img.jpg);
+  background-image: url('../../assets/images/promo-img.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -224px;
@@ -21,10 +21,10 @@
   &__gradient {
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.4) 0%,
-        rgba(0, 0, 0, 0) 39.9%
+        rgb(0 0 0 / 40%) 0%,
+        rgb(0 0 0 / 0%) 39.9%
       ),
-      linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+      linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%));
   }
 
   &__container {
@@ -79,6 +79,7 @@
     background-color: $white;
     border-radius: 10px;
     @include font-text-small;
+
     cursor: pointer;
     transition-duration: 0.2s;
 

@@ -58,6 +58,7 @@
     color: $black;
     text-decoration: none;
     @include font-text-big;
+
     cursor: pointer;
     transition-duration: 0.2s;
 
@@ -145,19 +146,6 @@
     overflow: hidden;
     border-radius: 50px;
 
-    &:hover .tours__card-img {
-      transform: scale(1.2);
-    }
-
-    &:hover .tours__card-gradient-block {
-      transform: scale(1.2);
-    }
-
-    &:hover .tours__link-more {
-      background-color: $green400;
-      border-radius: 50px;
-    }
-
     @media screen and (max-width: 767px) {
       border-radius: 20px;
     }
@@ -170,11 +158,15 @@
     height: 100%;
     background: linear-gradient(
       360deg,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.06) 48.44%,
-      rgba(0, 0, 0, 0.5) 100%
+      rgb(0 0 0 / 40%) 0%,
+      rgb(0 0 0 / 6%) 48.44%,
+      rgb(0 0 0 / 50%) 100%
     );
     transition: all 0.3s ease;
+  }
+
+  &__card:hover .tours__card-gradient-block {
+    transform: scale(1.2);
   }
 
   &__card-img {
@@ -191,6 +183,10 @@
     @media screen and (max-width: 991px) {
       max-height: 318px;
     }
+  }
+
+  &__card:hover .tours__card-img {
+    transform: scale(1.2);
   }
 
   &__card-content {
@@ -249,5 +245,10 @@
     @media screen and (max-width: 767px) {
       max-width: 162px;
     }
+  }
+
+  &__card:hover .tours__link-more {
+    background-color: $green400;
+    border-radius: 50px;
   }
 }

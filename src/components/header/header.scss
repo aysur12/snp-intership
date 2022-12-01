@@ -11,13 +11,14 @@
     width: 100%;
     background-color: $fixed-menu-bg;
     backdrop-filter: blur(27px);
-    animation: fixedMenu 1s forwards;
+    animation: fixed-menu 1s forwards;
   }
 
-  @keyframes fixedMenu {
+  @keyframes fixed-menu {
     0% {
       height: 0;
     }
+
     100% {
       height: 88px;
     }

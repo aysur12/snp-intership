@@ -167,7 +167,7 @@
       width: 26px;
       height: 26px;
       margin-top: -2px;
-      background-image: url(../../assets/images/arrow-dropdown.svg);
+      background-image: url('../../assets/images/arrow-dropdown.svg');
       pointer-events: none;
 
       @media screen and (max-width: 767px) {
@@ -222,6 +222,7 @@
     outline: none;
     resize: none;
     @include font-text-normal;
+
     cursor: pointer;
 
     &:hover {

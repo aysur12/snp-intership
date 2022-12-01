@@ -37,7 +37,7 @@
     &::before {
       width: 12px;
       height: 10px;
-      background-image: url(../../assets/images/arrow-checkbox.svg);
+      background-image: url('../../assets/images/arrow-checkbox.svg');
       transform: scale(0);
       transform-origin: bottom left;
       transition: 120ms transform ease-in-out;
