@@ -41,11 +41,6 @@ const paths = {
     src: './src/assets/favicons/**/*',
     dist: './dist/assets/favicons/',
     watch: './src/assets/favicons/**/*'
-  },
-  sprites: {
-    src: './src/sprite/*.svg',
-    dist: './dist/assets/images/',
-    watch: './src/sprite/*.svg'
   }
 };
 

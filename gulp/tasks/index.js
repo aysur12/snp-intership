@@ -7,5 +7,4 @@ module.exports = {
   fonts: require('./fonts'),
   favicons: require('./favicons'),
   scripts: require('./scripts'),
-  svgSprite: require('./svgSprite'),
 }
