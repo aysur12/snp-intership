@@ -11,258 +11,259 @@ block variables
   - const title= "YourTour";
 
 block content
-  section.page__promo
-    +promo({
-      pageTitle: "Идеальные путешествия существуют",
-      promoSubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
-      promoButtonText: "Найти тур",
-    })
-  section.page__tours
-    +tours({
-      toursTitleText: "Выбери свой тур",
-      toursLinks: [
-        {toursLinkHref: "#", toursLinkName: "Популярные", isActive: true},
-        {toursLinkHref: "#", toursLinkName: "Авторские"},
-        {toursLinkHref: "#", toursLinkName: "Походы"},
-        {toursLinkHref: "#", toursLinkName: "Сплавы"},
-        {toursLinkHref: "#", toursLinkName: "Велопрогулки"},
-      ],
-      tourCards: [
-        {
-          cardTourImgSrc: "./assets/images/card-tour-photo-1.jpg",
-          cardTourImgAlt: "Автомобиль в горах",
-          cardTitleText: "Путешествие в горы",
-          cardSubtitleText: "от 80 000 руб",
-          cardLinkHref: "/mock-address/change-me-card-1",
-        },
-        {
-          cardTourImgSrc: "./assets/images/card-tour-photo-2.jpg",
-          cardTourImgAlt: "Девушка в пустыне",
-          cardTitleText: "Путешествие в горы",
-          cardSubtitleText: "от 80 000 руб",
-          cardLinkHref: "/mock-address/change-me-card-2",
-        },
-        {
-          cardTourImgSrc: "./assets/images/card-tour-photo-3.jpg",
-          cardTourImgAlt: "Утес на берегу моря",
-          cardTitleText: "Путешествие в горы",
-          cardSubtitleText: "от 80 000 руб",
-          cardLinkHref: "/mock-address/change-me-card-3",
-        },
-        {
-          cardTourImgSrc: "./assets/images/card-tour-photo-4.jpg",
-          cardTourImgAlt: "Улица города",
-          cardTitleText: "Путешествие в горы",
-          cardSubtitleText: "от 80 000 руб",
-          cardLinkHref: "/mock-address/change-me-card-4",
-        },
-        {
-          cardTourImgSrc: "./assets/images/card-tour-photo-5.jpg",
-          cardTourImgAlt: "Пляж",
-          cardTitleText: "Путешествие в горы",
-          cardSubtitleText: "от 80 000 руб",
-          cardLinkHref: "/mock-address/change-me-card-5",
-        },
-        {
-          cardTourImgSrc: "./assets/images/card-tour-photo-6.jpg",
-          cardTourImgAlt: "Мужчина на берегу горного озера",
-          cardTitleText: "Путешествие в горы",
-          cardSubtitleText: "от 80 000 руб",
-          cardLinkHref: "/mock-address/change-me-card-6",
-        },
-      ],
-      linkMoreText: "Подробнее",
-    })
-  section.page__tour-form
-    +tour-form({
-      touFormTitleText: "Собери свой тур",
-      touFormSubtitleText: "Идейные соображения высшего порядка,<br> а также рамки и место обучения кадров",
+  main.page
+    section.page__promo
+      +promo({
+        pageTitle: "Идеальные путешествия существуют",
+        promoSubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
+        promoButtonText: "Найти тур",
+      })
+    section.page__tours
+      +tours({
+        toursTitleText: "Выбери свой тур",
+        toursLinks: [
+          {toursLinkHref: "#", toursLinkName: "Популярные", isActive: true},
+          {toursLinkHref: "#", toursLinkName: "Авторские"},
+          {toursLinkHref: "#", toursLinkName: "Походы"},
+          {toursLinkHref: "#", toursLinkName: "Сплавы"},
+          {toursLinkHref: "#", toursLinkName: "Велопрогулки"},
+        ],
+        tourCards: [
+          {
+            cardTourImgSrc: "./assets/images/card-tour-photo-1.jpg",
+            cardTourImgAlt: "Автомобиль в горах",
+            cardTitleText: "Путешествие в горы",
+            cardSubtitleText: "от 80 000 руб",
+            cardLinkHref: "/mock-address/change-me-card-1",
+          },
+          {
+            cardTourImgSrc: "./assets/images/card-tour-photo-2.jpg",
+            cardTourImgAlt: "Девушка в пустыне",
+            cardTitleText: "Путешествие в горы",
+            cardSubtitleText: "от 80 000 руб",
+            cardLinkHref: "/mock-address/change-me-card-2",
+          },
+          {
+            cardTourImgSrc: "./assets/images/card-tour-photo-3.jpg",
+            cardTourImgAlt: "Утес на берегу моря",
+            cardTitleText: "Путешествие в горы",
+            cardSubtitleText: "от 80 000 руб",
+            cardLinkHref: "/mock-address/change-me-card-3",
+          },
+          {
+            cardTourImgSrc: "./assets/images/card-tour-photo-4.jpg",
+            cardTourImgAlt: "Улица города",
+            cardTitleText: "Путешествие в горы",
+            cardSubtitleText: "от 80 000 руб",
+            cardLinkHref: "/mock-address/change-me-card-4",
+          },
+          {
+            cardTourImgSrc: "./assets/images/card-tour-photo-5.jpg",
+            cardTourImgAlt: "Пляж",
+            cardTitleText: "Путешествие в горы",
+            cardSubtitleText: "от 80 000 руб",
+            cardLinkHref: "/mock-address/change-me-card-5",
+          },
+          {
+            cardTourImgSrc: "./assets/images/card-tour-photo-6.jpg",
+            cardTourImgAlt: "Мужчина на берегу горного озера",
+            cardTitleText: "Путешествие в горы",
+            cardSubtitleText: "от 80 000 руб",
+            cardLinkHref: "/mock-address/change-me-card-6",
+          },
+        ],
+        linkMoreText: "Подробнее",
+      })
+    section.page__tour-form
+      +tour-form({
+        touFormTitleText: "Собери свой тур",
+        touFormSubtitleText: "Идейные соображения высшего порядка,<br> а также рамки и место обучения кадров",
 
-      inputNameTitleText: "Имя",
-      inputNameType: "text",
-      inputNameName: "userName",
-      inputNamePlaceholder: "Введите Ваше имя",
-      inputNamePattern: "^[А-Яа-яЁё\s]+$",
+        inputNameTitleText: "Имя",
+        inputNameType: "text",
+        inputNameName: "userName",
+        inputNamePlaceholder: "Введите Ваше имя",
+        inputNamePattern: "^[А-Яа-яЁё\s]+$",
 
-      selectTitleText: "Направление",
-      selectedOptionText: "Куда хотите ехать",
-      valueSelect1: "Москва",
-      valueSelect2: "Санкт-Петербург",
+        selectTitleText: "Направление",
+        selectedOptionText: "Куда хотите ехать",
+        valueSelect1: "Москва",
+        valueSelect2: "Санкт-Петербург",
 
-      inputEmailTitleText: "Email",
-      inputEmailType: "Email",
-      inputEmailName: "email",
-      inputEmailPlaceholder: "example@mail.com",
-      inputEmailPattern: "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}",
+        inputEmailTitleText: "Email",
+        inputEmailType: "Email",
+        inputEmailName: "email",
+        inputEmailPlaceholder: "example@mail.com",
+        inputEmailPattern: "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}",
 
-      inputTelTitleText: "Телефон",
-      inputTelType: "tel",
-      inputTellName: "phone",
-      inputTelPlaceholder: "+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _",
-      inputTelPattern: "\+?[0-9\s\-\(\)]+",
+        inputTelTitleText: "Телефон",
+        inputTelType: "tel",
+        inputTellName: "phone",
+        inputTelPlaceholder: "+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _",
+        inputTelPattern: "\+?[0-9\s\-\(\)]+",
 
-      inputDateFromTitleText: "Дата от",
-      inputDateFromType: "text",
-      inputDateFromName: "date-from",
-      inputDateFromPlaceholder: "ДД.ММ.ГГГГ",
+        inputDateFromTitleText: "Дата от",
+        inputDateFromType: "text",
+        inputDateFromName: "date-from",
+        inputDateFromPlaceholder: "ДД.ММ.ГГГГ",
 
-      inputDateToTitleText: "Дата до",
-      inputDateToType: "text",
-      inputDateToName: "date-to",
-      inputDateToPlaceholder: "ДД.ММ.ГГГГ",
+        inputDateToTitleText: "Дата до",
+        inputDateToType: "text",
+        inputDateToName: "date-to",
+        inputDateToPlaceholder: "ДД.ММ.ГГГГ",
 
-      textareaTitleText: "Комментарий",
+        textareaTitleText: "Комментарий",
 
-      inputRadioTitleText: "Вам есть 18 лет?",
-      firstInputRadioName: "question",
-      firstInputRadioValue: "Yes",
-      firstInputRadioLabelText: "Да",
-      secondInputRadioName: "question",
-      secondInputRadioValue: "No",
-      secondInputRadioLabelText: "Нет",
+        inputRadioTitleText: "Вам есть 18 лет?",
+        firstInputRadioName: "question",
+        firstInputRadioValue: "Yes",
+        firstInputRadioLabelText: "Да",
+        secondInputRadioName: "question",
+        secondInputRadioValue: "No",
+        secondInputRadioLabelText: "Нет",
 
-      checkboxLabelText: "Нажимая кнопку, я принимаю условия ",
-      checkboxLinkText: "Лицензионного договора",
-      checkboxLinkHref: "/mock-address/change-me-checkbox-link"
-    })
-  section.page__reviews
-    +reviews({
-      reviewsTitleText: "Отзывы наших путешественников",
-      reviewsSubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
-      reviewsItems: [
-        {
-          reviewText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.",
-          reviewUserName: "Мария",
-          reviewTourName: "Вдали от дома",
-          avatarImgSrc: "./assets/images/review-photo-1.jpg",
-          avatarImgAlt: "Аватар Марии",
-        },
-        {
-          reviewText: "Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. <br/> <br/>  Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.",
-          reviewUserName: "Павел",
-          reviewTourName: "Путешествие в горы",
-          avatarImgSrc: "./assets/images/review-photo-2.jpg",
-          avatarImgAlt: "Аватар Павла",
-        }
-      ],
-    })
-  section.page__gallery
-    +gallery({
-      galleryTitleText: "Фотографии путешествий",
-      gallerySubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
-      photoPlaceUpItems: [
-        {src: "./assets/images/travel-photo-1.jpg", alt: "Самолет"},
-        {src: "./assets/images/travel-photo-2.jpg", alt: "Вид из палатки"},
-        {src: "./assets/images/travel-photo-3.jpg", alt: "Путешественник среди скал"},
-        {src: "./assets/images/travel-photo-4.jpg", alt: "Трасса"}
-      ],
-      photoPlaceMiddleItems: [
-        {src: "./assets/images/travel-photo-5.jpg", alt: "Люди на берегу"},
-        {src: "./assets/images/travel-photo-6.jpg", alt: "Карта"},
-        {src: "./assets/images/travel-photo-7.jpg", alt: "Мост"},
-        {src: "./assets/images/travel-photo-8.jpg", alt: "Палатка на автомобиле"},
-        {src: "./assets/images/travel-photo-9.jpg", alt: "Улица городка"},
-      ],
-      photoPlaceDownItems: [
-        {src: "./assets/images/travel-photo-10.jpg", alt: "Городок"},
-        {src: "./assets/images/travel-photo-11.jpg", alt: "Человек у горного озера"},
-        {src: "./assets/images/travel-photo-12.jpg", alt: "Улица города"},
-        {src: "./assets/images/travel-photo-13.jpg", alt: "Девушка на байдарке"},
-      ],
-    })
-    +gallery({
-      forSmallDesktop: true,
-      galleryTitleText: "Фотографии путешествий",
-      gallerySubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
-      photoPlaceUpItems: [
-        {src: "./assets/images/travel-photo-1-sm-desktop.jpg", alt: "Самолет"},
-        {src: "./assets/images/travel-photo-3.jpg", alt: "Путешественник среди скал"},
-        {src: "./assets/images/travel-photo-4-sm-desktop.jpg", alt: "Трасса"}
-      ],
-      photoPlaceMiddleItems: [
-        {src: "./assets/images/travel-photo-5.jpg", alt: "Люди на берегу"},
-        {src: "./assets/images/travel-photo-6.jpg", alt: "Карта"},
-        {src: "./assets/images/travel-photo-8.jpg", alt: "Палатка на автомобиле"},
-        {src: "./assets/images/travel-photo-9-sm-desktop.jpg", alt: "Улица городка"},
-      ],
-      photoPlaceDownItems: [
-        {src: "./assets/images/travel-photo-10.jpg", alt: "Городок"},
-        {src: "./assets/images/travel-photo-11.jpg", alt: "Человек у горного озера"},
-        {src: "./assets/images/travel-photo-12.jpg", alt: "Девушка на байдарке"},
-      ],
-    })
-    +gallery({
-      forMobile: true,
-      galleryTitleText: "Фотографии путешествий",
-      gallerySubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
-      photoPlaceUpItems: [
-        {src: "./assets/images/travel-photo-1.jpg", alt: "Самолет"},
-        {src: "./assets/images/travel-photo-4.jpg", alt: "Трасса"}
-      ],
-      photoPlaceMiddleItems: [
-        {src: "./assets/images/travel-photo-5.jpg", alt: "Люди на берегу"},
-        {src: "./assets/images/travel-photo-8.jpg", alt: "Палатка на автомобиле"},
-        {src: "./assets/images/travel-photo-9-mobile.jpg", alt: "Улица городка"},
-      ],
-      photoPlaceDownItems: [
-        {src: "./assets/images/travel-photo-10.jpg", alt: "Городок"},
-        {src: "./assets/images/travel-photo-11.jpg", alt: "Человек у горного озера"},
-      ],
-    })
-  section.page__stories
-    +stories({
-      storiesTitleText: "Истории путешествий",
-      storiesSubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
-      storiesCards: [
-        {
-          cardImgSrc: "./assets/images/story-photo-1.jpg",
-          cardImgAlt: "",
-          cardTitle: "Автостопом в Стамбул",
-          cardText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:",
-          cardListItems: [
-            {text: "вкусная еда"},
-            {text: "дешевый транспорт"},
-            {text: "красивый город"},
-          ],
-          storiesLinkMoreHref: "/mock-address/change-me-card-story-1",
-          cardStoriesSocialLinks: [
-            {text: "instagram", href: "/mock-address/change-me-instagram"},
-            {text: "facebook", href: "/mock-address/change-me-facebook"},
-            {text: "YouTube", href: "/mock-address/change-me-YouTube"},
-          ],
-        },
-        {
-          cardImgSrc: "./assets/images/story-photo-2.jpg",
-          cardImgAlt: "",
-          cardTitle: "Автостопом в Стамбул",
-          cardText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.",
-          storiesLinkMoreHref: "/mock-address/change-me-card-story-2",
-          cardStoriesSocialLinks: [
-            {text: "instagram", href: "/mock-address/change-me-instagram"},
-            {text: "ВKонтакте", href: "/mock-address/change-me-vk"},
-          ],
-        },
-        {
-          cardImgSrc: "./assets/images/story-photo-3.jpg",
-          cardImgAlt: "",
-          cardTitle: "Автостопом в Стамбул",
-          cardText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.",
-          storiesLinkMoreHref: "/mock-address/change-me-card-story-2",
-          cardStoriesSocialLinks: [
-            {text: "instagram", href: "/mock-address/change-me-instagram"},
-            {text: "facebook", href: "/mock-address/change-me-facebook"},
-            {text: "ВKонтакте", href: "/mock-address/change-me-vk"},
-          ],
-        },
-      ],
-      linkMoreText: "Подробнее",
-    })
-  section.page__call-to-action
-    +call-to-action({
-      callToActionImgSrc: "./assets/images/footer-photo.jpg",
-      callToActionImgAlt: "Домик в горах",
-      callToActionTitleText: "Пора в путешествие вместе с нами!",
-      callToActionText: "Напиши на почту и узнай подробности на ",
-      callToActionLinkHref: "/mock-address/change-me-call-to-action",
-      callToActionLinkText: "yourtour@gmail.com",
-    })
+        checkboxLabelText: "Нажимая кнопку, я принимаю условия ",
+        checkboxLinkText: "Лицензионного договора",
+        checkboxLinkHref: "/mock-address/change-me-checkbox-link"
+      })
+    section.page__reviews
+      +reviews({
+        reviewsTitleText: "Отзывы наших путешественников",
+        reviewsSubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
+        reviewsItems: [
+          {
+            reviewText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.",
+            reviewUserName: "Мария",
+            reviewTourName: "Вдали от дома",
+            avatarImgSrc: "./assets/images/review-photo-1.jpg",
+            avatarImgAlt: "Аватар Марии",
+          },
+          {
+            reviewText: "Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. <br/> <br/>  Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.",
+            reviewUserName: "Павел",
+            reviewTourName: "Путешествие в горы",
+            avatarImgSrc: "./assets/images/review-photo-2.jpg",
+            avatarImgAlt: "Аватар Павла",
+          }
+        ],
+      })
+    section.page__gallery
+      +gallery({
+        galleryTitleText: "Фотографии путешествий",
+        gallerySubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
+        photoPlaceUpItems: [
+          {src: "./assets/images/travel-photo-1.jpg", alt: "Самолет"},
+          {src: "./assets/images/travel-photo-2.jpg", alt: "Вид из палатки"},
+          {src: "./assets/images/travel-photo-3.jpg", alt: "Путешественник среди скал"},
+          {src: "./assets/images/travel-photo-4.jpg", alt: "Трасса"}
+        ],
+        photoPlaceMiddleItems: [
+          {src: "./assets/images/travel-photo-5.jpg", alt: "Люди на берегу"},
+          {src: "./assets/images/travel-photo-6.jpg", alt: "Карта"},
+          {src: "./assets/images/travel-photo-7.jpg", alt: "Мост"},
+          {src: "./assets/images/travel-photo-8.jpg", alt: "Палатка на автомобиле"},
+          {src: "./assets/images/travel-photo-9.jpg", alt: "Улица городка"},
+        ],
+        photoPlaceDownItems: [
+          {src: "./assets/images/travel-photo-10.jpg", alt: "Городок"},
+          {src: "./assets/images/travel-photo-11.jpg", alt: "Человек у горного озера"},
+          {src: "./assets/images/travel-photo-12.jpg", alt: "Улица города"},
+          {src: "./assets/images/travel-photo-13.jpg", alt: "Девушка на байдарке"},
+        ],
+      })
+      +gallery({
+        forSmallDesktop: true,
+        galleryTitleText: "Фотографии путешествий",
+        gallerySubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
+        photoPlaceUpItems: [
+          {src: "./assets/images/travel-photo-1-sm-desktop.jpg", alt: "Самолет"},
+          {src: "./assets/images/travel-photo-3.jpg", alt: "Путешественник среди скал"},
+          {src: "./assets/images/travel-photo-4-sm-desktop.jpg", alt: "Трасса"}
+        ],
+        photoPlaceMiddleItems: [
+          {src: "./assets/images/travel-photo-5.jpg", alt: "Люди на берегу"},
+          {src: "./assets/images/travel-photo-6.jpg", alt: "Карта"},
+          {src: "./assets/images/travel-photo-8.jpg", alt: "Палатка на автомобиле"},
+          {src: "./assets/images/travel-photo-9-sm-desktop.jpg", alt: "Улица городка"},
+        ],
+        photoPlaceDownItems: [
+          {src: "./assets/images/travel-photo-10.jpg", alt: "Городок"},
+          {src: "./assets/images/travel-photo-11.jpg", alt: "Человек у горного озера"},
+          {src: "./assets/images/travel-photo-12.jpg", alt: "Девушка на байдарке"},
+        ],
+      })
+      +gallery({
+        forMobile: true,
+        galleryTitleText: "Фотографии путешествий",
+        gallerySubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
+        photoPlaceUpItems: [
+          {src: "./assets/images/travel-photo-1.jpg", alt: "Самолет"},
+          {src: "./assets/images/travel-photo-4.jpg", alt: "Трасса"}
+        ],
+        photoPlaceMiddleItems: [
+          {src: "./assets/images/travel-photo-5.jpg", alt: "Люди на берегу"},
+          {src: "./assets/images/travel-photo-8.jpg", alt: "Палатка на автомобиле"},
+          {src: "./assets/images/travel-photo-9-mobile.jpg", alt: "Улица городка"},
+        ],
+        photoPlaceDownItems: [
+          {src: "./assets/images/travel-photo-10.jpg", alt: "Городок"},
+          {src: "./assets/images/travel-photo-11.jpg", alt: "Человек у горного озера"},
+        ],
+      })
+    section.page__stories
+      +stories({
+        storiesTitleText: "Истории путешествий",
+        storiesSubtitleText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров",
+        storiesCards: [
+          {
+            cardImgSrc: "./assets/images/story-photo-1.jpg",
+            cardImgAlt: "",
+            cardTitle: "Автостопом в Стамбул",
+            cardText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:",
+            cardListItems: [
+              {text: "вкусная еда"},
+              {text: "дешевый транспорт"},
+              {text: "красивый город"},
+            ],
+            storiesLinkMoreHref: "/mock-address/change-me-card-story-1",
+            cardStoriesSocialLinks: [
+              {text: "instagram", href: "/mock-address/change-me-instagram"},
+              {text: "facebook", href: "/mock-address/change-me-facebook"},
+              {text: "YouTube", href: "/mock-address/change-me-YouTube"},
+            ],
+          },
+          {
+            cardImgSrc: "./assets/images/story-photo-2.jpg",
+            cardImgAlt: "",
+            cardTitle: "Автостопом в Стамбул",
+            cardText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.",
+            storiesLinkMoreHref: "/mock-address/change-me-card-story-2",
+            cardStoriesSocialLinks: [
+              {text: "instagram", href: "/mock-address/change-me-instagram"},
+              {text: "ВKонтакте", href: "/mock-address/change-me-vk"},
+            ],
+          },
+          {
+            cardImgSrc: "./assets/images/story-photo-3.jpg",
+            cardImgAlt: "",
+            cardTitle: "Автостопом в Стамбул",
+            cardText: "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.",
+            storiesLinkMoreHref: "/mock-address/change-me-card-story-2",
+            cardStoriesSocialLinks: [
+              {text: "instagram", href: "/mock-address/change-me-instagram"},
+              {text: "facebook", href: "/mock-address/change-me-facebook"},
+              {text: "ВKонтакте", href: "/mock-address/change-me-vk"},
+            ],
+          },
+        ],
+        linkMoreText: "Подробнее",
+      })
+    section.page__call-to-action
+      +call-to-action({
+        callToActionImgSrc: "./assets/images/footer-photo.jpg",
+        callToActionImgAlt: "Домик в горах",
+        callToActionTitleText: "Пора в путешествие вместе с нами!",
+        callToActionText: "Напиши на почту и узнай подробности на ",
+        callToActionLinkHref: "/mock-address/change-me-call-to-action",
+        callToActionLinkText: "yourtour@gmail.com",
+      })
