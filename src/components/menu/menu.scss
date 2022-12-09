@@ -1,8 +1,4 @@
 .menu {
-  width: 100%;
-  max-width: 29.313em;
-  max-height: 28px;
-
   &__list {
     display: flex;
     justify-content: space-between;
@@ -29,7 +25,6 @@
   }
 
   &__link {
-    position: relative;
     color: $white;
     text-decoration: none;
     @include font-text-normal;

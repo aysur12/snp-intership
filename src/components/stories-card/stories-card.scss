@@ -24,7 +24,7 @@
       rgb(0 0 0 / 0%) 0.01%,
       rgb(0 0 0 / 20%) 100%
     );
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
   &:hover .stories-card__gradient-block {
@@ -37,7 +37,7 @@
     height: 100%;
     max-height: 567px;
     object-fit: cover;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 
     @media screen and (max-width: 767px) {
       max-height: 455px;

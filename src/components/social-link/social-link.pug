@@ -6,13 +6,23 @@ mixin social-link(params= {})
       forFooter= false,
       socialImgSrc= "",
       socialImgAlt= "",
+      forInstagram= false,
+      forFacebook= false,
+      forVK= false,
     } = params;
 
     const socialLinkForFooter = forFooter ? "social-link_place_footer" : "";
     const socialLinkTextForFooter = forFooter ? "social-link__text_place_footer" : "";
+    const instagramImg= forInstagram ? "social-link__img_for_instagram" : "";
+    const facebookImg= forFacebook ? "social-link__img_for_facebook" : "";
+    const vkImg= forVK ? "social-link__img_for_vk" : "";
+
 
   a.social-link(class= `${socialLinkForFooter}` href=socialLinkHref)
     if forFooter
-      .social-link__img-block
-        img.social-link__img(src= socialImgSrc, alt= socialImgAlt)
+      img.social-link__img(
+        class=`${facebookImg}${instagramImg}${vkImg}`
+        src= socialImgSrc
+        alt= socialImgAlt
+      )
     .social-link__text(class=`${socialLinkTextForFooter}`)= socialLinkText

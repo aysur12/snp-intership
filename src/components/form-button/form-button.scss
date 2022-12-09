@@ -4,15 +4,18 @@
   justify-content: center;
   width: 235px;
   padding: 15px;
+  color: $white;
   background-color: $green400;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition-duration: 0.2s;
+  @include font-text-normal;
 
   @media screen and (max-width: 767px) {
     width: 134px;
     padding: 12px;
+    @include font-text-normal-mobile;
   }
 
   &:hover {
@@ -24,6 +27,7 @@
   }
 
   &_reset {
+    color: $green400;
     background-color: $green100;
 
     &:hover {
@@ -32,19 +36,6 @@
 
     &:active {
       background-color: $gray200;
-    }
-  }
-
-  &__text {
-    color: $white;
-    @include font-text-normal;
-
-    &_reset {
-      color: $green400;
-    }
-
-    @media screen and (max-width: 767px) {
-      @include font-text-normal-mobile;
     }
   }
 }
