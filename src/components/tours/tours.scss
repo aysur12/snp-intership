@@ -236,15 +236,7 @@
     }
   }
 
-  &__link-more {
-    width: 199px;
-
-    @media screen and (max-width: 767px) {
-      width: 162px;
-    }
-  }
-
-  &__card:hover .tours__link-more {
+  &__card:hover .link-more {
     background-color: $green400;
     border-radius: 50px;
   }

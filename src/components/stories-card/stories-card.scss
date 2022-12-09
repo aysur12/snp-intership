@@ -129,15 +129,7 @@
     justify-content: space-between;
   }
 
-  &__link-more {
-    max-width: 199px;
-
-    @media screen and (max-width: 767px) {
-      max-width: 162px;
-    }
-  }
-
-  &:hover .stories-card__link-more {
+  &:hover .link-more {
     background-color: $green400;
     border-radius: 50px;
   }

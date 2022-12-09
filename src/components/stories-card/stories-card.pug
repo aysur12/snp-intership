@@ -27,8 +27,7 @@ mixin stories-card(params= {})
               - const {text} = storiesCardListItem;
               li.stories-card__list-item= text
       .stories-card__links
-        .stories-card__link-more
-          +link-more({linkMoreHref, linkMoreText})
+        +link-more({linkMoreHref, linkMoreText})
         ul.stories-card__social-links
           each storiesSocialLink in storiesSocialLinks
             - const {text, href } = storiesSocialLink
