@@ -1,5 +1,3 @@
-include ../review/review
-
 mixin reviews(params= {})
   -
     const {
@@ -24,11 +22,11 @@ mixin reviews(params= {})
                 avatarImgSrc,
                 avatarImgAlt,
                 } = reviewsItem;
-            +review({
-              reviewText,
-              reviewUserName,
-              reviewTourName,
-              avatarImgSrc,
-              avatarImgAlt,
-            })
+            p.reviews__text
+              != reviewText
+            .reviews__user-block
+              .reviews__user-content
+                h3.reviews__user-name= reviewUserName
+                p.reviews__tour-name Тур: #{reviewTourName}
+              img.reviews__avatar(src= avatarImgSrc alt= avatarImgAlt)
 

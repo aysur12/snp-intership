@@ -16,16 +16,6 @@
     }
   }
 
-  &__img-block {
-    width: 26px;
-    height: 26px;
-
-    @media screen and (max-width: 767px) {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
   &__img {
     @media screen and (max-width: 767px) {
       width: 20px;
